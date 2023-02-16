@@ -1,5 +1,5 @@
 import LanguageCountTag from "./LanguageCountTag";
-import type { TagType } from "@/pages";
+import type { TagType } from "@/types";
 
 export default function TagsCard({ TagsData }: { TagsData: TagType[] }) {
   return (

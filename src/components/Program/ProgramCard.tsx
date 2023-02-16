@@ -4,13 +4,17 @@ import { HiUsers, HiClock } from "react-icons/hi";
 
 import LanguageTag from "./LanguageTag";
 
-import type { ProgramType } from "@/pages";
+import type { ProgramType } from "@/types";
 
-export default function ProgramCard({ ProgramData }: { ProgramData: ProgramType }) {
+export default function ProgramCard({
+  ProgramData,
+}: {
+  ProgramData: ProgramType;
+}) {
   return (
     <>
       <Link
-        href={`/${ProgramData.slug}`}
+        href={`/program/${ProgramData.slug}`}
         className="block p-5 mb-2 rounded-lg shadow-xl hover:shadow-2xl bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700"
       >
         <h5 className="text-xl md:text-2xl font-bold tracking-tight">

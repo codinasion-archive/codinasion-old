@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -10,9 +10,7 @@ type ReactMarkdownPropsType = {
   children: string;
 };
 
-export default function ReactMarkdownComponent({
-  children,
-}: ReactMarkdownPropsType) {
+export default function MarkdownPreview({ children }: ReactMarkdownPropsType) {
   return (
     <>
       <ReactMarkdown

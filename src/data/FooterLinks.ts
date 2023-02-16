@@ -1,12 +1,4 @@
-type FooterLinkType = {
-  title: string;
-  url: string;
-};
-
-type FooterLinksType = {
-  title: string;
-  links: FooterLinkType[];
-};
+import { FooterLinksType } from "@/types";
 
 const FooterLinks: FooterLinksType[] = [
   {
@@ -39,5 +31,3 @@ const FooterLinks: FooterLinksType[] = [
 ];
 
 export default FooterLinks;
-
-export type { FooterLinkType, FooterLinksType };

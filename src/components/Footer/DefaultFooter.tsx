@@ -6,7 +6,7 @@ import { BsTwitter, BsGithub, BsDiscord } from "react-icons/bs";
 import Logo from "@/public/logo.png";
 import SiteMetaData from "@/data/SiteMetaData";
 import FooterLinks from "@/data/FooterLinks";
-import type { FooterLinkType, FooterLinksType } from "@/data/FooterLinks";
+import type { FooterLinkType, FooterLinksType } from "@/types";
 
 export default function DefaultFooter() {
   return (

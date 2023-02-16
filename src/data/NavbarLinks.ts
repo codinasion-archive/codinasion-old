@@ -1,9 +1,4 @@
-type NavbarLinkType = {
-  title: string;
-  url: string;
-};
-
-type NavbarLinksType = NavbarLinkType[];
+import { NavbarLinksType } from "@/types";
 
 const NavbarLinks: NavbarLinksType = [
   {
@@ -17,5 +12,3 @@ const NavbarLinks: NavbarLinksType = [
 ];
 
 export default NavbarLinks;
-
-export type { NavbarLinkType, NavbarLinksType };

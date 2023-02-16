@@ -14,7 +14,7 @@ import Logo from "@/public/logo.png";
 import SiteMetaData from "@/data/SiteMetaData";
 
 import NavbarLinks from "@/data/NavbarLinks";
-import type { NavbarLinkType } from "@/data/NavbarLinks";
+import type { NavbarLinkType } from "@/types";
 
 import DarkModeToggle from "./DarkModeToggle";
 

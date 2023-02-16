@@ -1,4 +1,4 @@
-import type { TagType } from "@/pages";
+import type { TagType } from "@/types";
 
 export default function LanguageCountTag({
   tag = {
