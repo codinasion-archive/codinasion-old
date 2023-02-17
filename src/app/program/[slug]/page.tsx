@@ -1,4 +1,5 @@
 import MarkdownPreview from "@/components/MarkdownPreview";
+import Comment from "@/components/Comment";
 import { AvailableSolutionCard, ContributorsCard } from "@/components/Program";
 
 async function getProgramData(slug: string) {
@@ -31,6 +32,9 @@ export default async function ProgramPage({
         <div className="grid md:grid-cols-6 gap-8">
           <div className="md:col-span-4">
             <MarkdownPreview>{ProgramData.markdown}</MarkdownPreview>
+            <div className="my-10">
+              <Comment />
+            </div>
           </div>
           <div className="md:col-span-2">
             <AvailableSolutionCard
