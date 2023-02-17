@@ -1,5 +1,5 @@
 import MarkdownPreview from "@/components/MarkdownPreview";
-import { AvailableSolutionCard } from "@/components/Program";
+import { AvailableSolutionCard, ContributorsCard } from "@/components/Program";
 
 async function getProgramData(slug: string) {
   const res = await fetch(
@@ -27,7 +27,7 @@ export default async function ProgramPage({
 
   return (
     <>
-      <section className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <section className="py-8 px-4 mx-auto lg:py-16 lg:px-6">
         <div className="grid md:grid-cols-6 gap-8">
           <div className="md:col-span-4">
             <MarkdownPreview>{ProgramData.markdown}</MarkdownPreview>
@@ -37,6 +37,7 @@ export default async function ProgramPage({
               tags={ProgramData.tags}
               trackId={ProgramData.trackId}
             />
+            <ContributorsCard contributors={ProgramData.contributors} />
           </div>
         </div>
       </section>

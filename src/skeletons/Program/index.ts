@@ -5,4 +5,12 @@ import { default as TagsCard } from "./TagsCard";
 
 import { default as AvailableSolutionCard } from "./AvailableSolutionCard";
 
-export { ProgramCard, LanguageTag, TagsCard, AvailableSolutionCard };
+import { default as ContributorsCard } from "./ContributorsCard";
+
+export {
+  ProgramCard,
+  LanguageTag,
+  TagsCard,
+  AvailableSolutionCard,
+  ContributorsCard,
+};

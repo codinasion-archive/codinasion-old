@@ -1,5 +1,5 @@
 import MarkdownPreview from "@/skeletons/MarkdownPreview";
-import { AvailableSolutionCard } from "@/skeletons/Program";
+import { AvailableSolutionCard, ContributorsCard } from "@/skeletons/Program";
 
 export default async function Loading() {
   return (
@@ -11,6 +11,7 @@ export default async function Loading() {
           </div>
           <div className="md:col-span-2">
             <AvailableSolutionCard />
+            <ContributorsCard />
           </div>
         </div>
       </section>
