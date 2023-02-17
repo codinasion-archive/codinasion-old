@@ -3,11 +3,11 @@ import { NavbarLinksType } from "@/types";
 const NavbarLinks: NavbarLinksType = [
   {
     title: "API",
-    url: "/api",
+    url: "https://api.codinasion.org/",
   },
   {
-    title: "Blog",
-    url: "/blog",
+    title: "Projects",
+    url: "/projects",
   },
 ];
 

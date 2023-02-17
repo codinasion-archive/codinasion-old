@@ -5,8 +5,8 @@ const FooterLinks: FooterLinksType[] = [
     title: "Resources",
     links: [
       {
-        title: "Blog",
-        url: "/blog",
+        title: "Projects",
+        url: "/projects",
       },
     ],
   },
@@ -14,8 +14,8 @@ const FooterLinks: FooterLinksType[] = [
     title: "Projects",
     links: [
       {
-        title: "Archive",
-        url: "/archive",
+        title: "Program",
+        url: "/program",
       },
     ],
   },
@@ -23,8 +23,8 @@ const FooterLinks: FooterLinksType[] = [
     title: "Misc",
     links: [
       {
-        title: "About",
-        url: "/about",
+        title: "Contributors",
+        url: "/contributors",
       },
     ],
   },
