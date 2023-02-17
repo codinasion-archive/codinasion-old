@@ -10,8 +10,8 @@ type AvailableSolutionCardProps = {
 };
 
 export default function AvailableSolutionCard({
-  tags,
-  trackId,
+  tags = [],
+  trackId = 1,
 }: AvailableSolutionCardProps) {
   return (
     <>
@@ -21,8 +21,8 @@ export default function AvailableSolutionCard({
         </h5>
         <hr className="my-2 border-gray-200 sm:mx-auto dark:border-gray-500" />
         <div className="py-2 flex flex-wrap">
-          {tags.map((tag: string) => (
-            <LanguageTag key={tag} tag={tag} />
+          {tags.map((tag, index) => (
+            <LanguageTag key={index} tag={tag} />
           ))}
         </div>
         <div className="mt-5">
