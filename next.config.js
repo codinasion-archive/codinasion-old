@@ -12,10 +12,23 @@ const nextConfig = {
         destination: "/program/:slug*",
         permanent: true,
       },
+      {
+        source: "/contributor",
+        destination: "/contributors",
+        permanent: true,
+      },
     ];
   },
   experimental: {
     appDir: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "github.com",
+      },
+    ],
   },
 };
 

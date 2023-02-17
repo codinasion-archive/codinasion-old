@@ -35,7 +35,7 @@ export default async function ProgramPage() {
       <section className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="grid md:grid-cols-6 gap-6">
           <div className="md:col-span-4">
-            {ProgramsData.slice(0, 10).map((ProgramData: ProgramType) => (
+            {ProgramsData.map((ProgramData: ProgramType) => (
               <ProgramCard key={ProgramData.slug} ProgramData={ProgramData} />
             ))}
           </div>
