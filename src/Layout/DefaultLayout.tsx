@@ -8,6 +8,7 @@ interface Props {
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ScrollTopButton } from "@/components/PageNavigation";
 
 export default function DefaultLayout({ children }: Props) {
   return (
@@ -16,6 +17,7 @@ export default function DefaultLayout({ children }: Props) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <ScrollTopButton/>
       </ThemeProvider>
     </>
   );
