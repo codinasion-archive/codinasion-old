@@ -12,7 +12,7 @@ export default function DarkModeToggle() {
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         <span className="sr-only">Dark Mode Toggle</span>
-        {theme === "dark" ? <BsFillSunFill /> : <MdOutlineDarkMode />}
+        {['dark', 'system'].includes(theme || 'system') ? <BsFillSunFill /> : <MdOutlineDarkMode />}
       </button>
     </>
   );
