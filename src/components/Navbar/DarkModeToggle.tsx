@@ -18,10 +18,14 @@ export default function DarkModeToggle() {
     <>
       <button
         className="mx-4 rounded-lg p-2 border-transparent focus:border-transparent text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:ring-0 focus:ring-gray-200 dark:focus:ring-gray-600"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onClick={() => setTheme(["light", "system"].includes(theme || "system") ? "dark" : "light")}
       >
         <span className="sr-only">Dark Mode Toggle</span>
-        {['dark', 'system'].includes(theme || 'system') ? <BsFillSunFill /> : <MdOutlineDarkMode />}
+        {["light", "system"].includes(theme || "system") ? 
+          <MdOutlineDarkMode />
+         : 
+          <BsFillSunFill />
+        }
       </button>
     </>
   );
