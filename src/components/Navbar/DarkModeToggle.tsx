@@ -1,10 +1,19 @@
 import { MdOutlineDarkMode } from "react-icons/md";
 import { BsFillSunFill } from "react-icons/bs";
+import { useEffect, useState } from "react";
 
 import { useTheme } from "next-themes";
 
 export default function DarkModeToggle() {
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+  const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  
+  setTheme(darkMode ? 'dark' : 'light')
+  }, [setTheme])
+
+
   return (
     <>
       <button
