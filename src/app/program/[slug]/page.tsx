@@ -29,7 +29,7 @@ export default async function ProgramPage({
   return (
     <>
       <section className="py-8 px-4 mx-auto lg:py-16 lg:px-6">
-        <div className="grid md:grid-cols-6 gap-8">
+        <div className="grid md:grid-cols-6 md:gap-8 sm:gap-4 sm:grid-cols-1">
           <div className="md:col-span-4">
             <MarkdownPreview>{ProgramData.markdown}</MarkdownPreview>
             <div className="my-10">
