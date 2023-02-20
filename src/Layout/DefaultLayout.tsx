@@ -17,7 +17,7 @@ export default function DefaultLayout({ children }: Props) {
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <ScrollTopButton/>
+        <ScrollTopButton />
       </ThemeProvider>
     </>
   );

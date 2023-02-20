@@ -8,6 +8,10 @@ const FooterLinks: FooterLinksType[] = [
         title: "Projects",
         url: "/projects",
       },
+      {
+        title: "Contributors",
+        url: "/contributors",
+      },
     ],
   },
   {
@@ -17,14 +21,22 @@ const FooterLinks: FooterLinksType[] = [
         title: "Program",
         url: "/program",
       },
+      {
+        title: "Archive",
+        url: "/archive",
+      },
     ],
   },
   {
     title: "Misc",
     links: [
       {
-        title: "Contributors",
-        url: "/contributors",
+        title: "Site Map",
+        url: "/sitemap.xml",
+      },
+      {
+        title: "Robots Txt",
+        url: "/robots.txt",
       },
     ],
   },

@@ -44,7 +44,7 @@ export default function Pagination({
 
   const selectedProgramData = programData
     .slice(from, to)
-    .map(program => <ProgramCard key={program.slug} ProgramData={program} />);
+    .map((program) => <ProgramCard key={program.slug} ProgramData={program} />);
 
   if (totalPages < 5) {
     return (
