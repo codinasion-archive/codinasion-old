@@ -10,9 +10,11 @@ import ActivityCalendar, {
 } from "react-activity-calendar";
 import ReactTooltip from "react-tooltip";
 
+import type { GithubUserArchiveType } from "@/types/Archive";
+
 type Props = {
   data: CalendarData;
-  github_user_archives: any;
+  github_user_archives: GithubUserArchiveType[];
 };
 
 export default function ArchiveCalendar({ data, github_user_archives }: Props) {

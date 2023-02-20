@@ -2,7 +2,9 @@ import Link from "next/link";
 
 import { UserDetailsCard, ArchiveCalendar } from "@/components/Archive";
 
-async function generateData(github_user_archives: any) {
+import type { GithubUserArchiveType } from "@/types/Archive";
+
+async function generateData(github_user_archives: GithubUserArchiveType[]) {
   // Get list of all dates of 2023
   const dates = [];
   for (let i = 0; i <= 365; i++) {
@@ -12,7 +14,7 @@ async function generateData(github_user_archives: any) {
   // iterate over all dates and check if there is an archive for that date
   const data = dates.map((date) => {
     const dateStr = date.toISOString().split("T")[0];
-    const archive = github_user_archives.find(
+    const archive = github_user_archives?.find(
       (archive: any) => archive.date === dateStr
     );
 
@@ -71,7 +73,10 @@ export default async function ArchivePage({
             </h2>
           </div>
           <div className="text-center my-10 py-5 lg:mb-12">
-            <Link href="" className="mt-5 p-5 bg-gray-300 hover:bg-gray-200 rounded">
+            <Link
+              href={`https://github.com/codinasion/archive/issues/new?assignees=harshraj8843&labels=add-verify-username&template=add-verify.yml&title=${username}&username=${username}`}
+              className="mt-5 p-5 bg-gray-300 hover:bg-gray-200 rounded"
+            >
               <b>Archive This User</b>
             </Link>
           </div>
@@ -87,7 +92,7 @@ export default async function ArchivePage({
       <section>
         <UserDetailsCard
           github_user={archiveData.github_user}
-          archive_count={archiveData.github_user_archives.length}
+          archive_count={archiveData.github_user_archives?.length}
         />
         <ArchiveCalendar
           // @ts-ignore

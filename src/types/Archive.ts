@@ -10,4 +10,11 @@ type GithubUserType = {
   fetch_error: boolean;
 };
 
-export type { GithubUserType };
+type GithubUserArchiveType = {
+  url: string;
+  image_url: string;
+  clicked_at: string;
+  date: string;
+};
+
+export type { GithubUserType, GithubUserArchiveType };
