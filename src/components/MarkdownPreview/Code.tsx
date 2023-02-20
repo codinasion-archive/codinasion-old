@@ -20,7 +20,7 @@ function Code({ node, inline, className, children, ...props }: Props) {
         lineProps={{ style: { whiteSpace: "pre-wrap", flexWrap: "wrap" } }}
         wrapLines={false}
         PreTag="div"
-        showLineNumbers={true}
+        // showLineNumbers={true}
         customStyle={{
           borderRadius: "0.5rem",
           padding: "1rem",
