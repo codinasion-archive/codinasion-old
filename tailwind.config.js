@@ -6,13 +6,12 @@ module.exports = {
     extend: {
       keyframes: {
         scale: {
-          '0%': { transform: 'scale(0)' },
-          '50%': { transform: 'scale(0.6)' },
-          '100%': { transform: 'scale(1.2)' },
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.075)' },
         },
       },
       animation: {
-        scale: 'scale 1s ease-in-out',
+        scale: 'scale 0.25s ease-in-out',
       }
     },
   },
