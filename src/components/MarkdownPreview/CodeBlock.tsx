@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import languages from "@/data/languages.json";
 import fileNaming from "@/scripts/fileNaming";
