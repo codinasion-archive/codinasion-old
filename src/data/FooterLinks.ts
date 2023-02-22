@@ -31,12 +31,16 @@ const FooterLinks: FooterLinksType[] = [
     title: "Misc",
     links: [
       {
-        title: "Site Map",
+        title: "sitemap.xml",
         url: "/sitemap.xml",
       },
       {
-        title: "Robots Txt",
+        title: "robots.txt",
         url: "/robots.txt",
+      },
+      {
+        title: "humans.txt",
+        url: "/humans.txt",
       },
     ],
   },

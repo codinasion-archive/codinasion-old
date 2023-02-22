@@ -26,7 +26,7 @@ const MdxComponents = {
   h4: (props: any) => <h3 className="text-xl font-bold" {...props} />,
   h5: (props: any) => <h4 className="text-lg font-bold" {...props} />,
   h6: (props: any) => <h5 className="text-base font-bold" {...props} />,
-  p: (props: any) => <p className="text-sm my-4" {...props} />,
+  p: (props: any) => <p className="text-md my-4" {...props} />,
   strong: (props: any) => <strong className="font-bold" {...props} />,
   em: (props: any) => <em className="italic" {...props} />,
   del: (props: any) => <del className="line-through" {...props} />,

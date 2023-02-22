@@ -8,6 +8,8 @@ import { default as AvailableSolutionCard } from "./AvailableSolutionCard";
 
 import { default as ContributorsCard } from "./ContributorsCard";
 
+import { default as Programs } from "./Programs";
+
 export {
   ProgramCard,
   LanguageTag,
@@ -15,4 +17,5 @@ export {
   LanguageCountTag,
   AvailableSolutionCard,
   ContributorsCard,
+  Programs,
 };
