@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { UserDetailsCard, ArchiveCalendar } from "@/components/Archive";
+import Breadcrumb from "@/components/Breadcrump";
 
 import type { GithubUserArchiveType } from "@/types/Archive";
 
@@ -90,6 +91,23 @@ export default async function ArchivePage({
   return (
     <>
       <section>
+        <div className="px-4">
+          <Breadcrumb
+            links={[
+              {
+                title: "Home",
+                url: "/",
+              },
+              {
+                title: "Archive",
+                url: "/archive",
+              },
+              {
+                title: username,
+              },
+            ]}
+          />
+        </div>
         <UserDetailsCard
           github_user={archiveData.github_user}
           archive_count={archiveData.github_user_archives?.length}

@@ -24,11 +24,13 @@ export default async function ContributorsPage() {
             Our Awesome Community 💖
           </h2>
         </div>
-
         <div className="lg:grid lg:grid-cols-4">
           {contributors.map((contributor: ContributorType) => (
             <ContributorCard key={contributor.id} contributor={contributor} />
           ))}
+        </div>
+        <div className="pt-10 text-center">
+          <h1 className="text-lg font-bold">& growing 🤗</h1>
         </div>
       </section>
     </>

@@ -1,7 +1,7 @@
-import type { ProgramType } from "@/types";
+import { TagsCard } from "@/components/Program";
 
-import { ProgramCard, TagsCard } from "@/components/Program";
-import Pagination from "@/components/PageNavigation/Pagination";
+import { Programs } from "@/components/Program";
+import Breadcrumb from "@/components/Breadcrump";
 
 async function getProgramsData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/programs`, {
@@ -33,13 +33,23 @@ export default async function ProgramPage() {
 
   return (
     <>
-      <section className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <section className="px-4 mx-auto max-w-screen-xl lg:px-6">
+        <div className="px-2">
+          <Breadcrumb
+            links={[
+              {
+                title: "Home",
+                url: "/",
+              },
+              {
+                title: "Program",
+              },
+            ]}
+          />
+        </div>
         <div className="grid md:grid-cols-6 gap-6">
           <div className="md:col-span-4">
-            {/* {ProgramsData.map((ProgramData: ProgramType) => (
-              <ProgramCard key={ProgramData.slug} ProgramData={ProgramData} />
-            ))} */}
-            <Pagination programData={ProgramsData} />
+            <Programs programData={ProgramsData} />
           </div>
           <div className="md:col-span-2">
             <TagsCard TagsData={TagsData} />
