@@ -1,6 +1,7 @@
 import MarkdownPreview from "@/components/MarkdownPreview";
 import Comment from "@/components/Comment";
 import { AvailableSolutionCard, ContributorsCard } from "@/components/Program";
+import Breadcrumb from "@/components/Breadcrump";
 
 async function getProgramData(slug: string) {
   const res = await fetch(
@@ -31,6 +32,21 @@ export default async function ProgramPage({
       <section className="py-8 px-4 lg:py-16 lg:px-6">
         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-8">
           <div className="md:col-span-4">
+            <Breadcrumb
+              links={[
+                {
+                  title: "Home",
+                  url: "/",
+                },
+                {
+                  title: "Program",
+                  url: "/program",
+                },
+                {
+                  title: slug,
+                },
+              ]}
+            />
             <MarkdownPreview>{ProgramData.markdown}</MarkdownPreview>
             <div className="my-10">
               <Comment />
