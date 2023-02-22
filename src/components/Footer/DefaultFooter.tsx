@@ -11,7 +11,7 @@ import type { FooterLinkType, FooterLinksType } from "@/types";
 export default function DefaultFooter() {
   return (
     <>
-      <footer className="my-6 px-4 md:px-10 pb-10">
+      <footer className="my-6 px-4 md:px-10">
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
           <div className="col-span-2 md:col-span-3">
@@ -76,6 +76,20 @@ export default function DefaultFooter() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <hr className="border-gray-200 sm:mx-auto dark:border-gray-700" />
+
+        <div className="flex flex-col items-center justify-center py-6">
+          <p className="text-md text-gray-500 dark:text-gray-400">
+            Made with ❤️ by{" "}
+            <Link
+              href={SiteMetaData.github_url}
+              className="font-bold text-gray-800 dark:text-gray-200"
+            >
+              {SiteMetaData.title}
+            </Link>
+          </p>
         </div>
       </footer>
     </>
