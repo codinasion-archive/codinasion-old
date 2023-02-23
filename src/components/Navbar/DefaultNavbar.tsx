@@ -83,6 +83,8 @@ export default function DefaultNavbar() {
                       alt={SiteMetaData.title}
                       width={32}
                       height={32}
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
+                      placeholder="blur"
                     />
                     <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                       {SiteMetaData.title}

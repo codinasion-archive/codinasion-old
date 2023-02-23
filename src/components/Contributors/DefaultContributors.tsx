@@ -32,6 +32,8 @@ export default function DefaultContributors({
                 alt={`${contributor.name}`}
                 width={64}
                 height={64}
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
+                placeholder="blur"
               />
             </Link>
           ))}
