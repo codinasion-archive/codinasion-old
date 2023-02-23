@@ -30,6 +30,7 @@ export default function UserDetailsCard({
       >
         <div>
           <Image
+            unoptimized
             className="inline-block h-28 w-28 rounded-xl m-1"
             src={`https://github.com/${github_user?.login}.png`}
             alt={`${github_user?.login}`}

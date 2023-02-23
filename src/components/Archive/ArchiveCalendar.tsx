@@ -73,6 +73,7 @@ export default function ArchiveCalendar({ data, github_user_archives }: Props) {
       <div className="px-1 py-5">
         {imageUrl && imageUrl !== "" ? (
           <Image
+            unoptimized
             src={`${process.env.NEXT_PUBLIC_API_URL}/archive?image_url=${imageUrl}`}
             alt="archive"
             width="0"

@@ -16,6 +16,7 @@ export default function UserCard({ github_user }: UserCardProps) {
         <div className="flex items-center space-x-4 bg-slate-200 dark:bg-slate-700 rounded-lg p-2 m-3 shadow-md hover:shadow-xl">
           <div className="flex-shrink-0">
             <Image
+              unoptimized
               className="inline-block h-10 w-10 rounded-xl m-1"
               src={`https://github.com/${github_user?.login}.png`}
               alt={`${github_user?.login}`}
