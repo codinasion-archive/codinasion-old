@@ -2,12 +2,35 @@
 
 import * as React from "react";
 
-import Link from "next/link";
+import Link from "@/components/Link";
 
 import { BiSearchAlt2 } from "react-icons/bi";
 
 export default function UserSearch() {
   const [username, setUsername] = React.useState<string>("");
+
+  const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
+  };
+
+  const escapedUsername = React.useMemo(() => {
+    return username.replace(/[&<>"']/g, (char) => {
+      switch (char) {
+        case "&":
+          return "&amp;";
+        case "<":
+          return "&lt;";
+        case ">":
+          return "&gt;";
+        case '"':
+          return "&quot;";
+        case "'":
+          return "&#039;";
+        default:
+          return char;
+      }
+    });
+  }, [username]);
 
   return (
     <>
@@ -23,10 +46,10 @@ export default function UserSearch() {
           className="bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 text-sm rounded-lg block w-full pl-28 p-2.5 dark:placeholder-gray-400 dark:text-white"
           placeholder="harshraj8843"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={handleUsernameChange}
         />
       </div>
-      <Link href={`/archive/${username}`}>
+      <Link href={`/archive/${escapedUsername}`}>
         <button className="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           <BiSearchAlt2 className="w-5 h-5" />
           <span className="sr-only">Search</span>

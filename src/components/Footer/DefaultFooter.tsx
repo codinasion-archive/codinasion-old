@@ -1,9 +1,10 @@
-import Link from "next/link";
+import Link from "@/components/Link"
 import Image from "next/image";
 
 import { BsTwitter, BsGithub, BsDiscord } from "react-icons/bs";
 
 import Logo from "@/public/logo.png";
+import PoweredByVercel from "@/public/powered-by-vercel.svg";
 import SiteMetaData from "@/data/SiteMetaData";
 import FooterLinks from "@/data/FooterLinks";
 import type { FooterLinkType, FooterLinksType } from "@/types";
@@ -59,6 +60,16 @@ export default function DefaultFooter() {
                   Become a sponsor
                 </Link>
               </div>
+            </div>
+
+            <div className="p-2 my-2">
+              <Link href="https://vercel.com/?utm_source=codinasion&utm_campaign=oss">
+                <Image
+                  src={PoweredByVercel}
+                  alt="Powered by Vercel"
+                  width={170}
+                />
+              </Link>
             </div>
           </div>
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import Link from "next/link";
+import Link from "@/components/Link"
 import Image from "next/image";
 
 import { HiBars3, HiXMark } from "react-icons/hi2";
