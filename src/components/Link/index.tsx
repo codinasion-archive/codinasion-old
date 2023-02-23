@@ -23,7 +23,7 @@ export default function CustomLinkComponent({
       !href.startsWith("#") &&
       !href.startsWith(`${SiteMetaData.site_url}`) ? (
         <Link
-          href={`${href}`}
+          href={href}
           target={target ? target : "_blank"}
           rel={rel ? rel : "noopener noreferrer"}
           className={className}
@@ -32,7 +32,7 @@ export default function CustomLinkComponent({
         </Link>
       ) : (
         <Link
-          href={`${href}`}
+          href={href}
           className={className}
           target={target ? target : "_self"}
           rel={rel ? rel : ""}
