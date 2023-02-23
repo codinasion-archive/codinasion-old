@@ -19,6 +19,14 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/humans.txt",
+        destination: "/api/humans.txt",
+      },
+    ];
+  },
   experimental: {
     appDir: true,
   },
