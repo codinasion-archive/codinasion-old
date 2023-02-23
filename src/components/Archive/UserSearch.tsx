@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import Link from "@/components/Link"
+import Link from "@/components/Link";
 
 import { BiSearchAlt2 } from "react-icons/bi";
 
@@ -23,7 +23,7 @@ export default function UserSearch() {
           className="bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 text-sm rounded-lg block w-full pl-28 p-2.5 dark:placeholder-gray-400 dark:text-white"
           placeholder="harshraj8843"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => setUsername(`${e.target.value}`)}
         />
       </div>
       <Link href={`/archive/${username}`}>
