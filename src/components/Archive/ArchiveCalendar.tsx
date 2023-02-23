@@ -73,12 +73,21 @@ export default function ArchiveCalendar({ data, github_user_archives }: Props) {
       <div className="px-1 py-5">
         {imageUrl && imageUrl !== "" ? (
           <Image
+            key={imageUrl
+              .replace(
+                "https://raw.githubusercontent.com/codinasion/archive/",
+                ""
+              )
+              .slice(0, 5)}
+            unoptimized
             src={`${process.env.NEXT_PUBLIC_API_URL}/archive?image_url=${imageUrl}`}
             alt="archive"
-            width="0"
-            height="0"
+            width="10"
+            height="10"
             sizes="100vw"
             className="w-full h-auto rounded-lg"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
+            placeholder="blur"
           />
         ) : (
           <div className="text-center">

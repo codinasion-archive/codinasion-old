@@ -30,11 +30,16 @@ export default function UserDetailsCard({
       >
         <div>
           <Image
+            unoptimized={
+              github_user?.sponsor || github_user?.verified ? false : true
+            }
             className="inline-block h-28 w-28 rounded-xl m-1"
             src={`https://github.com/${github_user?.login}.png`}
             alt={`${github_user?.login}`}
             width={128}
             height={128}
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
+            placeholder="blur"
           />
         </div>
         <div className="py-4">
@@ -55,7 +60,7 @@ export default function UserDetailsCard({
           <p className="text-sm truncate pt-2">
             {github_user?.sponsor && (
               <span className="text-yellow-500">
-                <GoVerified className="inline-block" /> Sponsor
+                <GoVerified className="inline-block" /> Pro
               </span>
             )}
           </p>

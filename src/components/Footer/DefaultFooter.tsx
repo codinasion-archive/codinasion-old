@@ -68,6 +68,8 @@ export default function DefaultFooter() {
                   src={PoweredByVercel}
                   alt="Powered by Vercel"
                   width={170}
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
+                  placeholder="blur"
                 />
               </Link>
             </div>
