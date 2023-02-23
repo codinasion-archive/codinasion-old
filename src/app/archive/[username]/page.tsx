@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/Link"
 
 import { UserDetailsCard, ArchiveCalendar } from "@/components/Archive";
 import Breadcrumb from "@/components/Breadcrump";

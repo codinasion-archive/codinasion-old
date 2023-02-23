@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import Link from "next/link";
+import Link from "@/components/Link"
 
 import { BiSearchAlt2 } from "react-icons/bi";
 
