@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "@/components/Link"
+import Link from "@/components/Link";
 
 import type { ContributorType } from "@/types/Contributors";
 

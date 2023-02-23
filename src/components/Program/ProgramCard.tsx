@@ -1,4 +1,4 @@
-import Link from "@/components/Link"
+import Link from "@/components/Link";
 
 import { HiUsers, HiClock } from "react-icons/hi";
 

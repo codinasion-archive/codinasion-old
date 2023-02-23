@@ -1,4 +1,4 @@
-import Link from "@/components/Link"
+import Link from "@/components/Link";
 import Image from "next/image";
 
 type ContributorsCardProps = {
