@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 import "./globals.css";
 
 import Layout from "@/Layout";
@@ -22,8 +24,26 @@ export default function RootLayout({
       <meta name="theme-color" content="#000000" />
       <link rel="apple-touch-icon" href={`${Logo.src}`} />
       <link rel="manifest" href={`${Manifest}`} />
+      <link rel="author" href="humans.txt" />
+
       <head />
+
       <body className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-X1PJY1SDDM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-X1PJY1SDDM');
+        `}
+        </Script>
+
         <Layout>{children}</Layout>
       </body>
     </html>
