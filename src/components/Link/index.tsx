@@ -21,7 +21,7 @@ export default function CustomLinkComponent({
     <>
       {!href.startsWith("/") &&
       !href.startsWith("#") &&
-      !href.startsWith(SiteMetaData.site_url) ? (
+      !href.startsWith(`${SiteMetaData.site_url}`) ? (
         <Link
           href={href}
           target={target ? target : "_blank"}
