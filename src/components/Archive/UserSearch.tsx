@@ -9,6 +9,10 @@ import { BiSearchAlt2 } from "react-icons/bi";
 export default function UserSearch() {
   const [username, setUsername] = React.useState<string>("");
 
+  const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
+  };
+
   return (
     <>
       <label className="sr-only">Search</label>
@@ -23,7 +27,7 @@ export default function UserSearch() {
           className="bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 text-sm rounded-lg block w-full pl-28 p-2.5 dark:placeholder-gray-400 dark:text-white"
           placeholder="harshraj8843"
           value={username}
-          onChange={(e) => setUsername(`${e.target.value}`)}
+          onChange={handleUsernameChange}
         />
       </div>
       <Link href={`/archive/${username}`}>
