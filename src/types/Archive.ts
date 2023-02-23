@@ -6,7 +6,7 @@ type GithubUserType = {
   last_clicked_at: string;
   allowed: boolean;
   verified: boolean;
-  sponsor: boolean;
+  pro: boolean;
   fetch_error: boolean;
 };
 
