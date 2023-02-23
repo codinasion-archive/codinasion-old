@@ -23,7 +23,7 @@ export default function UserDetailsCard({
     <>
       <div
         className={`grid grid-cols-2 md:grid-cols-5 rounded-lg p-2 m-3 shadow-md hover:shadow-xl ${
-          github_user?.sponsor
+          github_user?.pro
             ? "bg-gradient-to-r from-teal-100 to-teal-700 dark:from-cyan-800 dark:to-teal-900"
             : "bg-slate-200 dark:bg-slate-700"
         }`}
@@ -31,7 +31,7 @@ export default function UserDetailsCard({
         <div>
           <Image
             unoptimized={
-              github_user?.sponsor || github_user?.verified ? false : true
+              github_user?.pro || github_user?.verified ? false : true
             }
             className="inline-block h-28 w-28 rounded-xl m-1"
             src={`https://github.com/${github_user?.login}.png`}
@@ -58,7 +58,7 @@ export default function UserDetailsCard({
             )}
           </p>
           <p className="text-sm truncate pt-2">
-            {github_user?.sponsor && (
+            {github_user?.pro && (
               <span className="text-yellow-500">
                 <GoVerified className="inline-block" /> Pro
               </span>

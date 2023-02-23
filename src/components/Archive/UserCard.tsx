@@ -17,7 +17,7 @@ export default function UserCard({ github_user }: UserCardProps) {
           <div className="flex-shrink-0">
             <Image
               unoptimized={
-                github_user?.sponsor || github_user?.verified ? false : true
+                github_user?.pro || github_user?.verified ? false : true
               }
               className="inline-block h-10 w-10 rounded-xl m-1"
               src={`https://github.com/${github_user?.login}.png`}
@@ -34,7 +34,7 @@ export default function UserCard({ github_user }: UserCardProps) {
             </p>
 
             <p className="text-sm truncate">
-              {github_user?.sponsor ? (
+              {github_user?.pro ? (
                 <span className="text-amber-900 dark:text-amber-500">
                   <GoVerified className="inline-block" /> Pro
                 </span>
