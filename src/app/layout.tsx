@@ -24,13 +24,15 @@ export default function RootLayout({
       <meta name="theme-color" content="#000000" />
       <link rel="apple-touch-icon" href={`${Logo.src}`} />
       <link rel="manifest" href={`${Manifest}`} />
+
+      {/* <!-- humans.txt --> */}
       <link rel="author" href="humans.txt" />
 
       <head />
 
       {/* <!-- Google tag (gtag.js) --> */}
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-0PY0DVLFR1"
+        src="https://www.googletagmanager.com/gtag/js?id=G-X1PJY1SDDM"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -39,7 +41,7 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-0PY0DVLFR1');
+          gtag('config', 'G-X1PJY1SDDM');
         `}
       </Script>
 
