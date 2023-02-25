@@ -9,6 +9,13 @@ const Projects: ProjectType[] = [
     github_url: "https://github.com/codinasion/program",
   },
   {
+    title: "Good 1st Issue",
+    description:
+      "Good 1st Issue helps you find good first issues to contribute to open source projects.",
+    path: "/good1stissue",
+    github_url: "https://github.com/codinasion/good-1st-issue",
+  },
+  {
     title: "Archive",
     description: "Github User Profile Archive.",
     path: "/archive",
