@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/Image";
 import Link from "@/components/Link";
 
 import { GoVerified, GoUnverified } from "react-icons/go";
@@ -38,8 +38,6 @@ export default function UserDetailsCard({
             alt={`${github_user?.login}`}
             width={128}
             height={128}
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
-            placeholder="blur"
           />
         </div>
         <div className="py-4">

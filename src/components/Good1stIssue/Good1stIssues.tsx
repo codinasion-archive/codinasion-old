@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import type { Good1stIssueType } from "@/types";
 
-import Good1stIssueCard from "./Good1stIssueCard"
+import Good1stIssueCard from "./Good1stIssueCard";
 
 function returnArray(length: number) {
   return Array.from({ length });
@@ -47,7 +47,10 @@ export default function Good1stIssues({
   return (
     <>
       {Good1stIssueData.slice(from, to).map((Good1stIssue) => (
-        <Good1stIssueCard key={Good1stIssue.issue_url} Good1stIssueData={Good1stIssue} />
+        <Good1stIssueCard
+          key={Good1stIssue.issue_url}
+          Good1stIssueData={Good1stIssue}
+        />
       ))}
 
       {/* Pagination */}

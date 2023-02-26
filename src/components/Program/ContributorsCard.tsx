@@ -1,5 +1,5 @@
 import Link from "@/components/Link";
-import Image from "next/image";
+import Image from "@/components/Image";
 
 type ContributorsCardProps = {
   contributors: string[];
@@ -24,8 +24,6 @@ export default function ContributorsCard({
                 alt={`${contributor}`}
                 width={64}
                 height={64}
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
-                placeholder="blur"
               />
             </Link>
           ))}

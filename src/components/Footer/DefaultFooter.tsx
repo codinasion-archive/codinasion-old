@@ -1,5 +1,5 @@
 import Link from "@/components/Link";
-import Image from "next/image";
+import Image from "@/components/Image";
 
 import { BsTwitter, BsGithub, BsDiscord } from "react-icons/bs";
 
@@ -68,8 +68,6 @@ export default function DefaultFooter() {
                   src={PoweredByVercel}
                   alt="Powered by Vercel"
                   width={170}
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
-                  placeholder="blur"
                 />
               </Link>
             </div>

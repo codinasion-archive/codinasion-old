@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/Image";
 import Link from "@/components/Link";
 
 import type { ContributorType } from "@/types/Contributors";
@@ -19,8 +19,6 @@ export default function ContributorCard({
               alt={`${contributor.name}`}
               width={64}
               height={64}
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
-              placeholder="blur"
             />
           </div>
           <div className="flex-1 min-w-0">
