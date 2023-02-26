@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
     <>
       <div
         key={project.title}
-        className="flex flex-col p-6 mx-auto max-w-lg text-center bg-white rounded-lg border border-gray-100 dark:border-gray-600 xl:p-8 dark:bg-gray-700 shadow-lg hover:shadow-2xl transition hover:scale-105"
+        className="flex flex-col p-6 max-w-lg text-center bg-white rounded-lg border border-gray-100 dark:border-gray-600 xl:p-8 dark:bg-gray-700 shadow-lg hover:shadow-2xl transition hover:scale-105"
       >
         <h3 className="mb-4 text-2xl font-semibold">{project.title}</h3>
         <p className="mb-4 h-full font-medium text-gray-500 sm:text-lg dark:text-gray-400">
