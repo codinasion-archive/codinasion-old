@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { FiExternalLink } from "react-icons/fi";
+
 import SiteMetaData from "@/data/SiteMetaData";
 
 type Props = {
@@ -8,6 +10,7 @@ type Props = {
   rel?: string;
   className?: string;
   children: React.ReactNode;
+  externalIcon?: boolean;
 };
 
 export default function CustomLinkComponent({
@@ -16,6 +19,7 @@ export default function CustomLinkComponent({
   rel,
   className,
   children,
+  externalIcon = true,
 }: Props) {
   return (
     <>
@@ -29,6 +33,9 @@ export default function CustomLinkComponent({
           className={className}
         >
           {children}
+          {externalIcon && (
+            <FiExternalLink className="inline-block ml-1 text-sm text-gray-500" />
+          )}
         </Link>
       ) : (
         <Link

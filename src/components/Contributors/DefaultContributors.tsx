@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/Image";
 import Link from "@/components/Link";
 
 import { ContributorType } from "@/types/Contributors";
@@ -25,6 +25,7 @@ export default function DefaultContributors({
             <Link
               href={`https://github.com/${contributor.login}`}
               key={contributor.id}
+              externalIcon={false}
             >
               <Image
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-gray-900 m-1"
@@ -32,8 +33,6 @@ export default function DefaultContributors({
                 alt={`${contributor.name}`}
                 width={64}
                 height={64}
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
-                placeholder="blur"
               />
             </Link>
           ))}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/Image";
 import Link from "@/components/Link";
 
 import type { ContributorType } from "@/types/Contributors";
@@ -10,7 +10,10 @@ export default function ContributorCard({
 }) {
   return (
     <>
-      <Link href={`https://github.com/${contributor.login}`}>
+      <Link
+        href={`https://github.com/${contributor.login}`}
+        externalIcon={false}
+      >
         <div className="flex items-center space-x-4 bg-slate-200 dark:bg-slate-700 rounded-lg p-2 m-3 shadow-md hover:shadow-xl">
           <div className="flex-shrink-0">
             <Image
@@ -19,8 +22,6 @@ export default function ContributorCard({
               alt={`${contributor.name}`}
               width={64}
               height={64}
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
-              placeholder="blur"
             />
           </div>
           <div className="flex-1 min-w-0">

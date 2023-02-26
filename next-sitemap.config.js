@@ -7,11 +7,14 @@ const config = {
     "/sitemap-program.xml",
     "/archive/**",
     "/sitemap-archive.xml",
+    "/linkfree-og/**",
+    "/sitemap-linkfree-og.xml",
   ],
   robotsTxtOptions: {
     additionalSitemaps: [
       `${"https://codinasion.org"}/sitemap-program.xml`,
       `${"https://codinasion.org"}/sitemap-archive.xml`,
+      `${"https://codinasion.org"}/sitemap-linkfree-og.xml`,
     ],
   },
 };

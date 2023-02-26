@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import Image from "next/image";
+import Image from "@/components/Image";
 
 import ActivityCalendar, {
   type CalendarData,
@@ -86,8 +86,6 @@ export default function ArchiveCalendar({ data, github_user_archives }: Props) {
             height="10"
             sizes="100vw"
             className="w-full h-auto rounded-lg"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMq66uBwAEqAHl/evvtQAAAABJRU5ErkJggg=="
-            placeholder="blur"
           />
         ) : (
           <div className="text-center">
