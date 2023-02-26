@@ -25,6 +25,7 @@ export default function DefaultContributors({
             <Link
               href={`https://github.com/${contributor.login}`}
               key={contributor.id}
+              externalIcon={false}
             >
               <Image
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-gray-900 m-1"

@@ -38,13 +38,13 @@ export default function DefaultFooter() {
             <div className="p-2 my-2">
               <h2 className="text-lg font-bold">Social Links</h2>
               <div className="flex items-center justify-start py-3 space-x-4">
-                <Link href={SiteMetaData.github_url}>
+                <Link href={SiteMetaData.github_url} externalIcon={false}>
                   <BsGithub className="text-2xl text-gray-500 dark:text-gray-400" />
                 </Link>
-                <Link href={SiteMetaData.twitter_url}>
+                <Link href={SiteMetaData.twitter_url} externalIcon={false}>
                   <BsTwitter className="text-2xl text-gray-500 dark:text-gray-400" />
                 </Link>
-                <Link href={SiteMetaData.discord_url}>
+                <Link href={SiteMetaData.discord_url} externalIcon={false}>
                   <BsDiscord className="text-2xl text-gray-500 dark:text-gray-400" />
                 </Link>
               </div>
@@ -56,6 +56,7 @@ export default function DefaultFooter() {
                 <Link
                   href="https://github.com/sponsors/codinasion"
                   className="font-bold py-2 px-4 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-900 rounded-md"
+                  externalIcon={false}
                 >
                   Become a sponsor
                 </Link>
@@ -63,7 +64,10 @@ export default function DefaultFooter() {
             </div>
 
             <div className="p-2 my-2">
-              <Link href="https://vercel.com/?utm_source=codinasion&utm_campaign=oss">
+              <Link
+                href="https://vercel.com/?utm_source=codinasion&utm_campaign=oss"
+                externalIcon={false}
+              >
                 <Image
                   src={PoweredByVercel}
                   alt="Powered by Vercel"
@@ -89,7 +93,7 @@ export default function DefaultFooter() {
           ))}
         </div>
 
-        <hr className="border-gray-200 sm:mx-auto dark:border-gray-700" />
+        <hr className="border-gray-200 sm:mx-auto dark:border-gray-700 my-5" />
 
         <div className="flex flex-col items-center justify-center py-6">
           <p className="text-md text-gray-500 dark:text-gray-400">
@@ -97,6 +101,7 @@ export default function DefaultFooter() {
             <Link
               href={SiteMetaData.github_url}
               className="font-bold text-gray-800 dark:text-gray-200"
+              externalIcon={false}
             >
               {SiteMetaData.title}
             </Link>

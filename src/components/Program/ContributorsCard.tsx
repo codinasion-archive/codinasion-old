@@ -17,7 +17,11 @@ export default function ContributorsCard({
         <hr className="my-2 border-gray-200 sm:mx-auto dark:border-gray-500" />
         <div className="py-2 flex flex-wrap">
           {contributors.map((contributor) => (
-            <Link href={`https://github.com/${contributor}`} key={contributor}>
+            <Link
+              href={`https://github.com/${contributor}`}
+              key={contributor}
+              externalIcon={false}
+            >
               <Image
                 className="inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-gray-900 m-1"
                 src={`https://github.com/${contributor}.png`}

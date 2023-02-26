@@ -16,6 +16,7 @@ export default function Good1stIssueCard({
       <Link
         href={Good1stIssueData.issue_url}
         className="block p-5 mb-2 rounded-lg shadow-xl hover:shadow-2xl bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700"
+        externalIcon={false}
       >
         <h5 className="text-xl md:text-2xl font-bold tracking-tight">
           {Good1stIssueData.issue_title}

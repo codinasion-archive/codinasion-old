@@ -5,6 +5,10 @@ const FooterLinks: FooterLinksType[] = [
     title: "Resources",
     links: [
       {
+        title: "API",
+        url: "https://api.codinasion.org/",
+      },
+      {
         title: "Projects",
         url: "/projects",
       },

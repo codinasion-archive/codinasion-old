@@ -10,7 +10,10 @@ export default function ContributorCard({
 }) {
   return (
     <>
-      <Link href={`https://github.com/${contributor.login}`}>
+      <Link
+        href={`https://github.com/${contributor.login}`}
+        externalIcon={false}
+      >
         <div className="flex items-center space-x-4 bg-slate-200 dark:bg-slate-700 rounded-lg p-2 m-3 shadow-md hover:shadow-xl">
           <div className="flex-shrink-0">
             <Image

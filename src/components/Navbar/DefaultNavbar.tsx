@@ -25,7 +25,7 @@ export default function DefaultNavbar() {
       <header>
         <nav className="px-4 lg:px-6 py-4">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center" externalIcon={false}>
               <Image
                 src={Logo}
                 className="mr-3 rounded-md"
@@ -63,6 +63,7 @@ export default function DefaultNavbar() {
                     <Link
                       href={link.url}
                       className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                      externalIcon={false}
                     >
                       {link.title}
                     </Link>
@@ -76,7 +77,11 @@ export default function DefaultNavbar() {
               <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto px-6 py-4 lg:hidden bg-white dark:bg-gray-900">
                 {/* Mobile Logo */}
                 <div className="flex items-center justify-between">
-                  <Link href="/" className="flex items-center">
+                  <Link
+                    href="/"
+                    className="flex items-center"
+                    externalIcon={false}
+                  >
                     <Image
                       src={Logo}
                       className="mr-3 rounded-md"
@@ -107,6 +112,7 @@ export default function DefaultNavbar() {
                           key={link.title}
                           href={link.url}
                           className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 hover:bg-gray-400/20 text-gray-800 dark:text-gray-300"
+                          externalIcon={false}
                         >
                           {link.title}
                         </Link>
