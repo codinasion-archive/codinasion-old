@@ -24,7 +24,7 @@ export default function ProjectsComponent({ max }: ProjectsProps) {
           </div>
 
           {/* Projects */}
-          <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+          <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-14 lg:space-y-0">
             {
               // If max is defined, then only show that many projects
               max
