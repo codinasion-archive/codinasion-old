@@ -21,6 +21,13 @@ ${process.env.NEXT_PUBLIC_API_URL}/linkfree-og${username ? `/${username}` : ""}
 \`\`\``}
         </MarkdownPreview>
         <Image
+          unoptimized={
+            username === "" ||
+            username === "eddiejaoude" ||
+            username === "harshraj8843"
+              ? false
+              : true
+          }
           src={`${process.env.NEXT_PUBLIC_API_URL}/linkfree-og/${username}`}
           alt="LinkFree OG Image"
           width={1020}
