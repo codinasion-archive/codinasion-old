@@ -26,6 +26,10 @@ const FooterLinks: FooterLinksType[] = [
         url: "/good1stissue",
       },
       {
+        title: "LinkFree OG",
+        url: "/linkfree-og",
+      },
+      {
         title: "Archive",
         url: "/archive",
       },

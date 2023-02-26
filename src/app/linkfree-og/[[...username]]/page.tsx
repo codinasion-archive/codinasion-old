@@ -1,3 +1,5 @@
+import Link from "@/components/Link";
+
 import LinkFreeOG from "@/components/LinkFreeOG";
 
 export default async function ArchivePage({
@@ -13,10 +15,13 @@ export default async function ArchivePage({
         <div className="text-center py-5 space-y-5">
           <h1 className="text-4xl font-bold">LinkFree OG</h1>
           <p className="text-lg pb-5">
-            Dynamically generated OG images for LinkFree
+            Dynamically generated OG images for{" "}
+            <Link href="https://github.com/EddieHubCommunity/LinkFree">
+              <span className="font-bold text-blue-800 dark:text-blue-200">
+                LinkFree
+              </span>
+            </Link>
           </p>
-        </div>
-        <div className="flex items-center md:px-40 md:mx-40 px-5">
           {/* https://beta.nextjs.org/docs/routing/defining-routes#optional-catch-all-segments */}
           <LinkFreeOG username={username ? username[0] : ""} />
         </div>
