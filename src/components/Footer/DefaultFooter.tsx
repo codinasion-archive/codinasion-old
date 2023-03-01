@@ -7,9 +7,13 @@ import Logo from "@/public/logo.png";
 import PoweredByVercel from "@/public/powered-by-vercel.svg";
 import SiteMetaData from "@/data/SiteMetaData";
 import FooterLinks from "@/data/FooterLinks";
-import type { FooterLinkType, FooterLinksType } from "@/types";
+import type { FooterLinkType, FooterLinksType, SponsorType } from "@/types";
 
-export default function DefaultFooter() {
+type Props = {
+  featuredSponsors: SponsorType[];
+};
+
+export default function DefaultFooter({ featuredSponsors }: Props) {
   return (
     <>
       <footer className="my-6 px-4 md:px-10">
@@ -52,6 +56,27 @@ export default function DefaultFooter() {
 
             <div className="p-2 my-2">
               <h2 className="text-lg font-bold">Sponsors</h2>
+              <div className="flex items-center justify-start py-3 space-x-4">
+                {featuredSponsors.map((sponsor: SponsorType) => (
+                  <Link
+                    key={sponsor.login}
+                    href={
+                      sponsor.sponsor_url && sponsor.sponsor_url !== ""
+                        ? sponsor.sponsor_url
+                        : `https://github.com/${sponsor.login}`
+                    }
+                    externalIcon={false}
+                  >
+                    <Image
+                      src={`https://github.com/${sponsor.login}.png`}
+                      alt={sponsor.login}
+                      width={32}
+                      height={32}
+                      className="rounded"
+                    />
+                  </Link>
+                ))}
+              </div>
               <div className="py-4">
                 <Link
                   href="https://github.com/sponsors/codinasion"

@@ -2,21 +2,24 @@
 
 import { ThemeProvider } from "next-themes";
 
-interface Props {
-  children: React.ReactNode;
-}
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ScrollTopButton } from "@/components/PageNavigation";
 
-export default function DefaultLayout({ children }: Props) {
+import type { SponsorType } from "@/types";
+
+interface Props {
+  children: React.ReactNode;
+  featuredSponsors: SponsorType[];
+}
+
+export default function DefaultLayout({ children, featuredSponsors }: Props) {
   return (
     <>
       <ThemeProvider enableSystem={true} attribute="class">
         <Navbar />
         <main>{children}</main>
-        <Footer />
+        <Footer featuredSponsors={featuredSponsors} />
         <ScrollTopButton />
       </ThemeProvider>
     </>
