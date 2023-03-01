@@ -8,11 +8,28 @@ import Favicon from "@/public/favicon/favicon.ico";
 import Logo from "@/public/logo.png";
 import Manifest from "@/public/favicon/manifest.json";
 
-export default function RootLayout({
+async function getFeaturedSponsorsData() {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/sponsors/featured`,
+    {
+      next: { revalidate: 360 },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const featuredSponsors = await getFeaturedSponsorsData();
+
   return (
     <html lang="en">
       <meta
@@ -46,7 +63,7 @@ export default function RootLayout({
       </Script>
 
       <body className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
-        <Layout>{children}</Layout>
+        <Layout featuredSponsors={featuredSponsors}>{children}</Layout>
       </body>
     </html>
   );

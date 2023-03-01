@@ -9,6 +9,7 @@ import {
 import { NavbarLinkType, NavbarLinksType } from "./Navbar";
 import { ProgramType, TagType } from "./Program";
 import { ProjectType } from "./Project";
+import { SponsorType } from "./Sponsors";
 
 export type {
   GithubUserType,
@@ -24,4 +25,5 @@ export type {
   ProgramType,
   TagType,
   ProjectType,
+  SponsorType,
 };
