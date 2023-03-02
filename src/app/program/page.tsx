@@ -3,6 +3,8 @@ import { TagsCard } from "@/components/Program";
 import { Programs } from "@/components/Program";
 import Breadcrumb from "@/components/Breadcrump";
 
+import RepoCard from "@/components/RepoCard";
+
 async function getProgramsData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/programs`, {
     next: { revalidate: 60 },
@@ -53,6 +55,7 @@ export default async function ProgramPage() {
           </div>
           <div className="md:col-span-2">
             <TagsCard TagsData={TagsData} />
+            <RepoCard repo="codinasion/program" />
           </div>
         </div>
       </section>
