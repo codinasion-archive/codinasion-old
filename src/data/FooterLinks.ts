@@ -33,10 +33,6 @@ const FooterLinks: FooterLinksType[] = [
         title: "LinkFree OG",
         url: "/linkfree-og",
       },
-      {
-        title: "Archive",
-        url: "/archive",
-      },
     ],
   },
   {

@@ -22,12 +22,6 @@ const Projects: ProjectType[] = [
     github_url: "https://github.com/codinasion/hello-world",
   },
   {
-    title: "Archive",
-    description: "Github User Profile Archive.",
-    path: "/archive",
-    github_url: "https://github.com/codinasion/archive",
-  },
-  {
     title: "Codinasion Tools",
     description: "A collection of open source tools.",
     path: "https://tools.codinasion.org/",
@@ -38,6 +32,12 @@ const Projects: ProjectType[] = [
     description: "Dynamically generated OG images for LinkFree",
     path: "/linkfree-og",
     github_url: "https://github.com/codinasion/LinkFree-OG",
+  },
+  {
+    title: "Archive",
+    description: "Github User Profile Archive.",
+    path: "/archive",
+    github_url: "https://github.com/codinasion/archive",
   },
 ];
 

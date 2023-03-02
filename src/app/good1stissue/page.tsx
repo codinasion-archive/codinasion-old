@@ -2,6 +2,8 @@ import { Good1stIssues, TagsCard } from "@/components/Good1stIssue";
 
 import Breadcrumb from "@/components/Breadcrump";
 
+import RepoCard from "@/components/RepoCard";
+
 async function getGood1stIssueData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/good1stissue`, {
     next: { revalidate: 60 },
@@ -39,6 +41,7 @@ export default async function Good1stIssuePage() {
           </div>
           <div className="md:col-span-2">
             <TagsCard TagsData={Good1stIssueData.labels} />
+            <RepoCard repo="codinasion/good-1st-issue" />
           </div>
         </div>
       </section>

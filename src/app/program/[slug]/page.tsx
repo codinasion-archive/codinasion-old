@@ -2,6 +2,7 @@ import MarkdownPreview from "@/components/MarkdownPreview";
 import Comment from "@/components/Comment";
 import { AvailableSolutionCard, ContributorsCard } from "@/components/Program";
 import Breadcrumb from "@/components/Breadcrump";
+import RepoCard from "@/components/RepoCard";
 
 async function getProgramData(slug: string) {
   const res = await fetch(
@@ -58,6 +59,7 @@ export default async function ProgramPage({
               trackId={ProgramData.trackId}
             />
             <ContributorsCard contributors={ProgramData.contributors} />
+            <RepoCard repo="codinasion/program" />
           </div>
         </div>
       </section>
