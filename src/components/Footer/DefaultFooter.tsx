@@ -83,7 +83,7 @@ export default function DefaultFooter({ featuredSponsors }: Props) {
                   className="font-bold py-2 px-4 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-900 rounded-md"
                   externalIcon={false}
                 >
-                  Become a sponsor
+                  Sponsor Us
                 </Link>
               </div>
             </div>

@@ -45,6 +45,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "api.codinasion.org",
       },
+      {
+        protocol: "https",
+        hostname: "gh-card.dev",
+      },
     ],
   },
 };
