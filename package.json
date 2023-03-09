@@ -14,7 +14,7 @@
   "dependencies": {
     "@codinasion/tools": "codinasion/tools",
     "@giscus/react": "^2.2.8",
-    "@headlessui/react": "^1.7.10",
+    "@headlessui/react": "^1.7.13",
     "@next/env": "^13.2.3",
     "@next/font": "13.2.1",
     "download-cli": "^1.1.1",
