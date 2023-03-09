@@ -22,6 +22,12 @@ const Projects: ProjectType[] = [
     github_url: "https://github.com/codinasion/hello-world",
   },
   {
+    title: "Tools",
+    description: "A collection of open source tools.",
+    path: "/tools",
+    github_url: "https://github.com/codinasion/tools",
+  },
+  {
     title: "Codinasion Tools",
     description: "A collection of open source tools.",
     path: "https://tools.codinasion.org/",

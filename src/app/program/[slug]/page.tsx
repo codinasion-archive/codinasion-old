@@ -53,7 +53,7 @@ export default async function ProgramPage({
               <Comment />
             </div>
           </div>
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 mt-6">
             <AvailableSolutionCard
               tags={ProgramData.tags}
               trackId={ProgramData.trackId}
