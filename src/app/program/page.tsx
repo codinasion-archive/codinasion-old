@@ -53,7 +53,7 @@ export default async function ProgramPage() {
           <div className="md:col-span-4">
             <Programs programData={ProgramsData} />
           </div>
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 mt-6">
             <TagsCard TagsData={TagsData} />
             <RepoCard repo="codinasion/program" />
           </div>
