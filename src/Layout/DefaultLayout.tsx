@@ -18,7 +18,9 @@ export default function DefaultLayout({ children, featuredSponsors }: Props) {
     <>
       <ThemeProvider enableSystem={true} attribute="class">
         <Navbar />
-        <main>{children}</main>
+        <main className="container mx-auto max-w-7xl px-4 lg:px-6 py-4">
+          {children}
+        </main>
         <Footer featuredSponsors={featuredSponsors} />
         <ScrollTopButton />
       </ThemeProvider>

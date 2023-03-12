@@ -24,7 +24,7 @@ export default function DefaultNavbar() {
     <>
       <header>
         <nav className="px-4 lg:px-6 py-4">
-          <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <div className="flex flex-wrap justify-between items-center mx-auto max-w-7xl">
             <Link href="/" className="flex items-center" externalIcon={false}>
               <Image
                 src={Logo}

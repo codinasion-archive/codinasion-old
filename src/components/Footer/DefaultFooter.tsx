@@ -16,7 +16,7 @@ type Props = {
 export default function DefaultFooter({ featuredSponsors }: Props) {
   return (
     <>
-      <footer className="my-6 px-4 md:px-10">
+      <footer className="my-6 px-4 md:px-10 max-w-7xl">
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
           <div className="col-span-2 md:col-span-3">
