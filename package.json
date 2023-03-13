@@ -16,7 +16,7 @@
     "@giscus/react": "^2.2.8",
     "@headlessui/react": "^1.7.10",
     "@next/env": "^13.2.3",
-    "@next/font": "13.2.1",
+    "@next/font": "13.2.4",
     "download-cli": "^1.1.1",
     "next": "13.1.6",
     "next-sitemap": "^3.1.54",
