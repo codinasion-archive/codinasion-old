@@ -6,9 +6,9 @@ type Good1stIssueType = {
   issue_labels: string[];
 };
 
-type TagType = {
+type Good1stIssueLabelType = {
   label: string;
   issue_count: number;
 };
 
-export type { Good1stIssueType, TagType };
+export type { Good1stIssueType, Good1stIssueLabelType };

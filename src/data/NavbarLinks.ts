@@ -1,6 +1,6 @@
-import { NavbarLinksType } from "@/types";
+import { NavbarLinkType } from "@/types";
 
-const NavbarLinks: NavbarLinksType = [
+const NavbarLinks: NavbarLinkType[] = [
   {
     title: "API",
     url: "https://api.codinasion.org/",

@@ -1,32 +1,20 @@
-import { GithubUserType, GithubUserArchiveType } from "./Archive";
-import { BreadcrumbType } from "./Breadcrump";
-import { ContributorType } from "./Contributors";
-import { FooterLinkType, FooterLinksType } from "./Footer";
-import {
-  Good1stIssueType,
-  TagType as Good1stIssueTagType,
-} from "./Good1stIssue";
-import { NavbarLinkType, NavbarLinksType } from "./Navbar";
-import { ProgramType, TagType } from "./Program";
-import { ProjectType } from "./Project";
-import { SponsorType } from "./Sponsors";
-import { ToolType, ToolTagType } from "./Tools";
+import type { BreadcrumbType } from "./Breadcrumb";
+import type { ContributorType } from "./Contributor";
+import type { FooterLinkType, FooterLinksType } from "./Footer";
+import { Good1stIssueType, Good1stIssueLabelType } from "./Good1stIssue";
+import type { NavbarLinkType } from "./Navbar";
+import type { ProgramType, ProgramLanguageCountTagType } from "./Program";
+import type { ProjectType } from "./Project";
 
 export type {
-  GithubUserType,
-  GithubUserArchiveType,
   BreadcrumbType,
   ContributorType,
   FooterLinkType,
   FooterLinksType,
   Good1stIssueType,
-  Good1stIssueTagType,
+  Good1stIssueLabelType,
   NavbarLinkType,
-  NavbarLinksType,
   ProgramType,
-  TagType,
+  ProgramLanguageCountTagType,
   ProjectType,
-  SponsorType,
-  ToolType,
-  ToolTagType,
 };

@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
   async redirects() {
     return [
       {
@@ -17,21 +20,44 @@ const nextConfig = {
         destination: "/contributors",
         permanent: true,
       },
-    ];
-  },
-  async rewrites() {
-    return [
       {
-        source: "/humans.txt",
-        destination: "/api/humans.txt",
+        source: "/good-first-issue/:path*",
+        destination: "/good-1st-issue/:path*",
+        permanent: true,
+      },
+      {
+        source: "/good-first-issues/:path*",
+        destination: "/good-1st-issue/:path*",
+        permanent: true,
+      },
+      {
+        source: "/good-1st-issues/:path*",
+        destination: "/good-1st-issue/:path*",
+        permanent: true,
+      },
+      {
+        source: "/goodfirstissue/:path*",
+        destination: "/good-1st-issue/:path*",
+        permanent: true,
+      },
+      {
+        source: "/goodfirstissues/:path*",
+        destination: "/good-1st-issue/:path*",
+        permanent: true,
+      },
+      {
+        source: "/good1stissue/:path*",
+        destination: "/good-1st-issue/:path*",
+        permanent: true,
+      },
+      {
+        source: "/good1stissues/:path*",
+        destination: "/good-1st-issue/:path*",
+        permanent: true,
       },
     ];
   },
-  experimental: {
-    appDir: true,
-  },
   images: {
-    // unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -40,14 +66,6 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "raw.githubusercontent.com",
-      },
-      {
-        protocol: "https",
-        hostname: "api.codinasion.org",
-      },
-      {
-        protocol: "https",
-        hostname: "gh-card.dev",
       },
     ],
   },

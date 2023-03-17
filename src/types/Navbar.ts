@@ -3,6 +3,4 @@ type NavbarLinkType = {
   url: string;
 };
 
-type NavbarLinksType = NavbarLinkType[];
-
-export type { NavbarLinkType, NavbarLinksType };
+export type { NavbarLinkType };
