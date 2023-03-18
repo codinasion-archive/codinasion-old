@@ -27,16 +27,12 @@ const FooterLinks: FooterLinksType[] = [
       },
       {
         title: "Good 1st Issue",
-        url: "/good1stissue",
-      },
-      {
-        title: "LinkFree OG",
-        url: "/linkfree-og",
+        url: "/good-1st-issue",
       },
     ],
   },
   {
-    title: "Misc",
+    title: "Quick Links",
     links: [
       {
         title: "sitemap.xml",

@@ -7,9 +7,9 @@ type ProgramType = {
   latestUpdateDate: string;
 };
 
-type TagType = {
+type ProgramLanguageCountTagType = {
   name: string;
   count: number;
 };
 
-export type { ProgramType, TagType };
+export type { ProgramType, ProgramLanguageCountTagType };

@@ -20,13 +20,13 @@ type CodeProps = {
 
 const MdxComponents = {
   // Text
-  h1: (props: any) => <h1 className="text-4xl font-bold" {...props} />,
-  h2: (props: any) => <h2 className="text-3xl font-bold" {...props} />,
-  h3: (props: any) => <h3 className="text-2xl font-bold" {...props} />,
-  h4: (props: any) => <h3 className="text-xl font-bold" {...props} />,
-  h5: (props: any) => <h4 className="text-lg font-bold" {...props} />,
-  h6: (props: any) => <h5 className="text-base font-bold" {...props} />,
-  p: (props: any) => <p className="text-md my-4" {...props} />,
+  h1: (props: any) => <h1 className="text-3xl font-bold" {...props} />,
+  h2: (props: any) => <h2 className="text-2xl font-bold" {...props} />,
+  h3: (props: any) => <h3 className="text-xl font-bold" {...props} />,
+  h4: (props: any) => <h3 className="text-lg font-bold" {...props} />,
+  h5: (props: any) => <h4 className="text-base font-bold" {...props} />,
+  h6: (props: any) => <h5 className="text-md font-bold" {...props} />,
+  p: (props: any) => <p className="text-sm my-4" {...props} />,
   strong: (props: any) => <strong className="font-bold" {...props} />,
   em: (props: any) => <em className="italic" {...props} />,
   del: (props: any) => <del className="line-through" {...props} />,

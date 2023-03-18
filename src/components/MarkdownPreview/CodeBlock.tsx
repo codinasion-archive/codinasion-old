@@ -1,8 +1,5 @@
 import * as React from "react";
 
-import languages from "@/data/languages.json";
-import fileNaming from "@/scripts/fileNaming";
-
 type Props = {
   node: any;
   inline: boolean;
@@ -20,7 +17,6 @@ export default function CodeBlock({
 }: Props) {
   const [blocks, setBlocks] = React.useState<any>([]);
   const [tabs, setTabs] = React.useState<any>([]);
-  const [filenames, setFilenames] = React.useState<any>([]);
   const [value, setValue] = React.useState<number>(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -36,20 +32,8 @@ export default function CodeBlock({
 
         let tag = language;
 
-        let languageData = languages.filter(
-          (lang: any) => lang.fileExtension === language
-        )[0];
-
-        if (languageData) {
-          tag = languageData.name;
-        }
-
-        let filename = slug.replaceAll("-", " ");
-        let file = await fileNaming(filename, languageData);
-
         setBlocks((prevBlocks: []) => [...prevBlocks, child]);
         setTabs((prevTabs: []) => [...prevTabs, tag]);
-        setFilenames((prevFilenames: []) => [...prevFilenames, file]);
       }
     });
   };
@@ -61,7 +45,7 @@ export default function CodeBlock({
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className="my-2 p-2 rounded-lg bg-gray-200">
+    <div className="my-2 p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
       <div>
         {tabs.map((tab: any, index: number) => {
           return (

@@ -12,7 +12,7 @@ const Projects: ProjectType[] = [
     title: "Good 1st Issue",
     description:
       "Good 1st Issue helps you find good first issues to contribute to open source projects.",
-    path: "/good1stissue",
+    path: "/good-1st-issue",
     github_url: "https://github.com/codinasion/good-1st-issue",
   },
   {
@@ -20,30 +20,6 @@ const Projects: ProjectType[] = [
     description:
       "'Hello World' in every programming language. Good collection of good first issue",
     github_url: "https://github.com/codinasion/hello-world",
-  },
-  {
-    title: "Tools",
-    description: "A collection of open source tools.",
-    path: "/tools",
-    github_url: "https://github.com/codinasion/tools",
-  },
-  {
-    title: "Codinasion Tools",
-    description: "A collection of open source tools.",
-    path: "https://tools.codinasion.org/",
-    github_url: "https://github.com/codinasion/codinasion-tools",
-  },
-  {
-    title: "LinkFree OG",
-    description: "Dynamically generated OG images for LinkFree",
-    path: "/linkfree-og",
-    github_url: "https://github.com/codinasion/LinkFree-OG",
-  },
-  {
-    title: "Archive",
-    description: "Github User Profile Archive.",
-    path: "/archive",
-    github_url: "https://github.com/codinasion/archive",
   },
 ];
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { FiExternalLink } from "react-icons/fi";
 
-import SiteMetaData from "@/data/SiteMetaData";
+import { SiteMetadata } from "@/data";
 
 type Props = {
   href: string;
@@ -25,7 +25,7 @@ export default function CustomLinkComponent({
     <>
       {!href.startsWith("/") &&
       !href.startsWith("#") &&
-      !href.startsWith(`${SiteMetaData.site_url}`) ? (
+      !href.startsWith(`${SiteMetadata.site_url}`) ? (
         <Link
           href={href}
           target={target ? target : "_blank"}
