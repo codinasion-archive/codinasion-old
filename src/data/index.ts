@@ -14,6 +14,12 @@ import {
 } from "./Program";
 import { default as Projects } from "./Projects";
 import { default as SiteMetadata } from "./SiteMetadata";
+import {
+  getToolsData,
+  getFilteredToolsData,
+  getToolTagsData,
+  getToolData,
+} from "./Tool";
 
 export {
   getContributorsData,
@@ -28,4 +34,8 @@ export {
   getProgramData,
   Projects,
   SiteMetadata,
+  getToolsData,
+  getFilteredToolsData,
+  getToolTagsData,
+  getToolData,
 };

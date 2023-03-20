@@ -20,27 +20,44 @@ type CodeProps = {
 
 const MdxComponents = {
   // Text
-  h1: (props: any) => <h1 className="text-3xl font-bold" {...props} />,
-  h2: (props: any) => <h2 className="text-2xl font-bold" {...props} />,
-  h3: (props: any) => <h3 className="text-xl font-bold" {...props} />,
-  h4: (props: any) => <h3 className="text-lg font-bold" {...props} />,
-  h5: (props: any) => <h4 className="text-base font-bold" {...props} />,
-  h6: (props: any) => <h5 className="text-md font-bold" {...props} />,
-  p: (props: any) => <p className="text-sm my-4" {...props} />,
+  h1: (props: any) => (
+    <>
+      <h1 className="text-3xl font-bold" {...props} />
+      <hr className="mt-2 mb-5 sm:mx-auto" />
+    </>
+  ),
+  h2: (props: any) => (
+    <>
+      <h2 className="text-2xl font-bold" {...props} />
+      <hr className="mt-2 mb-5 sm:mx-auto" />
+    </>
+  ),
+  h3: (props: any) => (
+    <>
+      <h3 className="text-xl my-2 font-bold" {...props} />
+    </>
+  ),
+  h4: (props: any) => <h4 className="text-lg my-2 font-bold" {...props} />,
+  h5: (props: any) => <h5 className="text-md my-2 font-bold" {...props} />,
+  h6: (props: any) => <h6 className="text-sm my-2 font-bold" {...props} />,
+  p: (props: any) => <p className="mt-2 mb-5 text-base" {...props} />,
   strong: (props: any) => <strong className="font-bold" {...props} />,
   em: (props: any) => <em className="italic" {...props} />,
   del: (props: any) => <del className="line-through" {...props} />,
 
   // Link
   a: (props: any) => (
-    <Link className="text-blue-500 hover:text-blue-600" {...props} />
+    <Link
+      className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
+      {...props}
+    />
   ),
 
   // List
   ul: (props: any) => <ul className="list-disc pl-8" {...props} />,
   ol: (props: any) => <ol className="list-decimal pl-8" {...props} />,
   li: (props: any) => <li className="my-2" {...props} />,
-  dl: (props: any) => <dl className="list-disc pl-8" {...props} />,
+  dl: (props: any) => <dl className="my-2" {...props} />,
   dt: (props: any) => <dt className="my-2" {...props} />,
   dd: (props: any) => <dd className="my-2" {...props} />,
 
@@ -64,7 +81,9 @@ const MdxComponents = {
   ),
 
   // Table
-  table: (props: any) => <table className="table-auto w-full" {...props} />,
+  table: (props: any) => (
+    <table className="mt-2 mb-5 table-auto w-full" {...props} />
+  ),
   thead: (props: any) => <thead className="font-bold" {...props} />,
   tbody: (props: any) => (
     <tbody className="text-gray-700 dark:text-gray-200" {...props} />
@@ -86,7 +105,7 @@ const MdxComponents = {
   // Blockquote
   blockquote: (props: any) => (
     <blockquote
-      className="border-l-4 border-blue-300 pl-3 bg-gray-200 dark:bg-gray-700"
+      className="px-4 py-2 my-2 border-l-4 border-gray-300 dark:border-gray-600"
       {...props}
     />
   ),
