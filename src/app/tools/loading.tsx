@@ -10,7 +10,7 @@ export default async function Loading() {
             url: "/",
           },
           {
-            title: "Program",
+            title: "Tools",
           },
         ]}
       />

@@ -1,14 +1,4 @@
-import { Projects } from "@/data";
-import type { ProjectType } from "@/types";
-
-import ProjectCard from "@/components/Project/ProjectCard";
-
-export const metadata = {
-  title: "Projects",
-  description: "List of projects, we maintain",
-};
-
-export default function ProjectsPage() {
+export default function Loading() {
   return (
     <>
       <div className="text-center my-5">
