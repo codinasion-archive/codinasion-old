@@ -23,13 +23,13 @@ const MdxComponents = {
   h1: (props: any) => (
     <>
       <h1 className="text-3xl font-bold" {...props} />
-      <hr className="mt-2 mb-4 sm:mx-auto" />
+      <hr className="mt-2 mb-5 sm:mx-auto" />
     </>
   ),
   h2: (props: any) => (
     <>
       <h2 className="text-2xl font-bold" {...props} />
-      <hr className="mt-2 mb-4 sm:mx-auto" />
+      <hr className="mt-2 mb-5 sm:mx-auto" />
     </>
   ),
   h3: (props: any) => (
@@ -40,7 +40,7 @@ const MdxComponents = {
   h4: (props: any) => <h4 className="text-lg my-2 font-bold" {...props} />,
   h5: (props: any) => <h5 className="text-md my-2 font-bold" {...props} />,
   h6: (props: any) => <h6 className="text-sm my-2 font-bold" {...props} />,
-  p: (props: any) => <p className="mt-2 mb-4" {...props} />,
+  p: (props: any) => <p className="mt-2 mb-5 text-base" {...props} />,
   strong: (props: any) => <strong className="font-bold" {...props} />,
   em: (props: any) => <em className="italic" {...props} />,
   del: (props: any) => <del className="line-through" {...props} />,
@@ -81,7 +81,7 @@ const MdxComponents = {
   ),
 
   // Table
-  table: (props: any) => <table className="table-auto w-full" {...props} />,
+  table: (props: any) => <table className="mt-2 mb-5 table-auto w-full" {...props} />,
   thead: (props: any) => <thead className="font-bold" {...props} />,
   tbody: (props: any) => (
     <tbody className="text-gray-700 dark:text-gray-200" {...props} />

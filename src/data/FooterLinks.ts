@@ -29,6 +29,10 @@ const FooterLinks: FooterLinksType[] = [
         title: "Good 1st Issue",
         url: "/good-1st-issue",
       },
+      {
+        title: "Tools",
+        url: "/tools",
+      },
     ],
   },
   {

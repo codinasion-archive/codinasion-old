@@ -16,6 +16,13 @@ const Projects: ProjectType[] = [
     github_url: "https://github.com/codinasion/good-1st-issue",
   },
   {
+    title: "Tools",
+    description:
+      "A collection of open source tools, written in TypeScript, that can be used in any JavaScript project.",
+    path: "/tools",
+    github_url: "https://github.com/codinasion/tools",
+  },
+  {
     title: "Hello World",
     description:
       "'Hello World' in every programming language. Good collection of good first issue",
