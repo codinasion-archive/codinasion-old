@@ -5,7 +5,7 @@ import { SiteMetadata } from "@/data";
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const sitemapData: string[] = [];
-  const allToolsData = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tools/`)
+  const allToolsData = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tools`)
     .then((res: any) => res.json())
     .catch((error) => console.log(error));
 
