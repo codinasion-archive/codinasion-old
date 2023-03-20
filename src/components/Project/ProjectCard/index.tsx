@@ -17,7 +17,7 @@ type ProjectCardProps = {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <>
-      <div className="rounded shadow-lg hover:shadow-xl bg-slate-200 dark:bg-slate-700 m-5">
+      <div className="rounded bg-slate-200 dark:bg-slate-700 m-5 shadow-lg hover:shadow-xl transition hover:scale-105">
         <div className="px-6 py-4 text-center">
           {project.title.toLowerCase() === "good 1st issue" ? (
             <BsFillEmojiSmileFill className="h-8 w-8 text-gray-900 rounded m-5 p-1 mx-auto bg-gradient-to-r from-green-400 to-blue-500" />
