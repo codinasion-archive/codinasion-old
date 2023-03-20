@@ -81,7 +81,9 @@ const MdxComponents = {
   ),
 
   // Table
-  table: (props: any) => <table className="mt-2 mb-5 table-auto w-full" {...props} />,
+  table: (props: any) => (
+    <table className="mt-2 mb-5 table-auto w-full" {...props} />
+  ),
   thead: (props: any) => <thead className="font-bold" {...props} />,
   tbody: (props: any) => (
     <tbody className="text-gray-700 dark:text-gray-200" {...props} />
