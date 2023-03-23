@@ -45,16 +45,16 @@ export const metadata = {
 
   // Open Graph
   openGraph: {
-    title: `${SiteMetadata.title}`,
-    description: `${SiteMetadata.description}`,
-    url: `${SiteMetadata.site_url}`,
-    siteName: `${SiteMetadata.title}`,
+    title: SiteMetadata.title,
+    description: SiteMetadata.description,
+    url: SiteMetadata.site_url,
+    siteName: SiteMetadata.title,
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_API_URL}/og`,
         width: 1200,
         height: 630,
-        alt: `${SiteMetadata.title}`,
+        alt: SiteMetadata.title,
       },
     ],
     locale: "en-US",
@@ -64,8 +64,8 @@ export const metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: `${SiteMetadata.title}`,
-    description: `${SiteMetadata.description}`,
+    title: SiteMetadata.title,
+    description: SiteMetadata.description,
     siteId: SiteMetadata.twitter_userid,
     creator: SiteMetadata.twitter_username,
     creatorId: SiteMetadata.twitter_userid,

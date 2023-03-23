@@ -20,6 +20,27 @@ export async function generateMetadata({
   return {
     title: ProgramData.title,
     description: `Write a program to ${ProgramData.title.toLowerCase()}`,
+
+    // Open Graph
+    openGraph: {
+      title: ProgramData.title,
+      description: `Write a program to ${ProgramData.title.toLowerCase()}`,
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_API_URL}/og?path=/program/${slug}`,
+          width: 1200,
+          height: 630,
+          alt: ProgramData.title,
+        },
+      ],
+    },
+
+    // Twitter Card
+    twitter: {
+      title: ProgramData.title,
+      description: `Write a program to ${ProgramData.title.toLowerCase()}`,
+      images: [`${process.env.NEXT_PUBLIC_API_URL}/og?path=/program/${slug}`],
+    },
   };
 }
 
