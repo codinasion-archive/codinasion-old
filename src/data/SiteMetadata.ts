@@ -5,6 +5,8 @@ const SiteMetadata = {
   github_url: "https://github.codinasion.org",
   twitter_url: "https://twitter.codinasion.org",
   discord_url: "https://discord.codinasion.org",
+  twitter_username: "codinasion",
+  twitter_userid: "1527970903367135232",
 };
 
 export default SiteMetadata;
