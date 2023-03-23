@@ -6,12 +6,71 @@ import "./globals.css";
 
 import { SiteMetadata } from "@/data";
 import Favicon from "@/public/favicon/favicon.ico";
+import AppleTouchIcon from "@/public/favicon/apple-touch-icon.png";
+import ShortcutIcon from "@/public/favicon/favicon-16x16.png";
 import Logo from "@/public/logo.png";
 import Manifest from "@/public/favicon/manifest.json";
 
 export const metadata = {
   title: SiteMetadata.title,
   description: SiteMetadata.description,
+
+  // basic
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "cyan" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  manifest: Manifest,
+  icons: {
+    icon: Favicon.src,
+    shortcut: ShortcutIcon.src,
+    apple: AppleTouchIcon.src,
+    android: Logo.src,
+  },
+
+  // robots.txt
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  // Open Graph
+  openGraph: {
+    title: `${SiteMetadata.title}`,
+    description: `${SiteMetadata.description}`,
+    url: `${SiteMetadata.site_url}`,
+    siteName: `${SiteMetadata.title}`,
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_API_URL}/og`,
+        width: 1200,
+        height: 630,
+        alt: `${SiteMetadata.title}`,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    title: `${SiteMetadata.title}`,
+    description: `${SiteMetadata.description}`,
+    siteId: SiteMetadata.twitter_userid,
+    creator: SiteMetadata.twitter_username,
+    creatorId: SiteMetadata.twitter_userid,
+    images: [`${process.env.NEXT_PUBLIC_API_URL}/og`],
+  },
 };
 
 export default function RootLayout({
@@ -21,16 +80,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta
-        name="viewport"
-        content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
-      />
-      <meta charSet="utf-8" />
-      <link rel="icon" href={`${Favicon.src}`} />
-      <meta name="theme-color" content="#000000" />
-      <link rel="apple-touch-icon" href={`${Logo.src}`} />
-      <link rel="manifest" href={`${Manifest}`} />
-
       {/* <!-- humans.txt --> */}
       <link rel="author" href="humans.txt" />
 
@@ -48,7 +97,7 @@ export default function RootLayout({
           gtag('config', 'G-X1PJY1SDDM');
         `}
       </Script>
-      <body className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+      <body className="bg-slate-200 dark:bg-slate-900 text-gray-800 dark:text-gray-200">
         <Layout>{children}</Layout>
       </body>
     </html>

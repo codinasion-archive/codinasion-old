@@ -12,7 +12,7 @@ export default function HomePage() {
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400 sm:text-center">
               We are a group of developer/programer from all over the world
               helps other developers to start their open source journey with our{" "}
-              <span className="bg-green-100 dark:bg-green-800 dark:text-gray-300 rounded-md mx-1 p-1">
+              <span className="bg-green-200 dark:bg-green-800 dark:text-gray-300 rounded-md mx-1 p-1">
                 Good First Issue
               </span>{" "}
               projects.
@@ -22,7 +22,7 @@ export default function HomePage() {
               <Link
                 href="https://github.com/codinasion/program"
                 target="_blank"
-                className="text-indigo-600 dark:text-indigo-200 hover:text-indigo-500 dark:hover:text-indigo-100 rounded-md mx-1 p-1 bg-slate-200 dark:bg-slate-700"
+                className="text-indigo-600 dark:text-indigo-200 hover:text-indigo-500 dark:hover:text-indigo-100 rounded-md mx-1 p-1 bg-slate-300 dark:bg-slate-700"
               >
                 Program
               </Link>
