@@ -9,7 +9,7 @@ import MarkdownPreview from "@/components/MarkdownPreview";
 import Comment from "@/components/Comment";
 import AvailableSolutionCard from "@/components/Program/AvailableSolutionCard";
 import ContributorsCard from "@/components/Program/ContributorsCard";
-import RepoCard from "@/components/RepoCard";
+import GithubRepoCard from "@/components/GithubRepoCard";
 import LanguageCard from "@/components/Program/LanguageCard";
 
 export async function generateMetadata({
@@ -109,7 +109,7 @@ export default async function ProgramDetailPage({
           <ContributorsCard contributors={ProgramData.contributors} />
 
           {/* @ts-expect-error Async Server Component */}
-          <RepoCard full_name="codinasion/program" />
+          <GithubRepoCard full_name="codinasion/program" />
 
           <LanguageCard TagsData={TagsData} />
         </div>

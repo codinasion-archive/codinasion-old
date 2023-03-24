@@ -1,6 +1,6 @@
 import { getContributorsData } from "./Contributors";
 import { default as FooterLinks } from "./FooterLinks";
-import { getRepoData } from "./Github";
+import { getGithubRepoData, getGithubAppData } from "./Github";
 import {
   getGood1stIssuesData,
   getFilteredGood1stIssuesData,
@@ -25,7 +25,8 @@ import {
 export {
   getContributorsData,
   FooterLinks,
-  getRepoData,
+  getGithubRepoData,
+  getGithubAppData,
   getGood1stIssuesData,
   getFilteredGood1stIssuesData,
   getGood1stIssueLabelsData,

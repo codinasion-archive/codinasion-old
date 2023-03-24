@@ -5,7 +5,7 @@ import { getProgramsData, getProgramTagsData } from "@/data";
 import Breadcrumb from "@/components/Breadcrumb";
 import ProgramCard from "@/components/Program/ProgramCard";
 import LanguageCard from "@/components/Program/LanguageCard";
-import RepoCard from "@/components/RepoCard";
+import GithubRepoCard from "@/components/GithubRepoCard";
 
 export const metadata = {
   title: "Program",
@@ -46,7 +46,7 @@ export default async function ProgramPage() {
           <LanguageCard TagsData={TagsData} />
 
           {/* @ts-expect-error Async Server Component */}
-          <RepoCard full_name="codinasion/program" />
+          <GithubRepoCard full_name="codinasion/program" />
         </div>
       </div>
     </>

@@ -7,7 +7,7 @@ import { getFilteredToolsData, getToolTagsData } from "@/data";
 import Breadcrumb from "@/components/Breadcrumb";
 import ToolCard from "@/components/Tool/ToolCard";
 import TagsCard from "@/components/Tool/TagsCard";
-import RepoCard from "@/components/RepoCard";
+import GithubRepoCard from "@/components/GithubRepoCard";
 
 export async function generateMetadata({
   params,
@@ -83,7 +83,7 @@ export default async function ToolTagPage({
           <TagsCard TagsData={TagsData} />
 
           {/* @ts-expect-error Async Server Component */}
-          <RepoCard full_name="codinasion/tools" />
+          <GithubRepoCard full_name="codinasion/tools" />
         </div>
       </div>
     </>

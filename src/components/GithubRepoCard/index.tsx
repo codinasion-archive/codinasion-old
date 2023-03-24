@@ -2,12 +2,16 @@ import { VscRepo, VscIssues } from "react-icons/vsc";
 import { AiOutlineStar, AiOutlineClockCircle } from "react-icons/ai";
 import { TbGitFork } from "react-icons/tb";
 
-import { getRepoData } from "@/data";
+import { getGithubRepoData } from "@/data";
 
 import Link from "@/components/Link";
 
-export default async function RepoCard({ full_name }: { full_name: string }) {
-  const RepoData = await getRepoData(full_name);
+export default async function GithubRepoCard({
+  full_name,
+}: {
+  full_name: string;
+}) {
+  const RepoData = await getGithubRepoData(full_name);
 
   return (
     <>
