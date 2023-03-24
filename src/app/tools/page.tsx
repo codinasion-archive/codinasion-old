@@ -15,8 +15,8 @@ export const metadata = {
 
 export default async function ToolPage() {
   // Initiate both requests in parallel
-  const GetToolsData = await getToolsData();
-  const GetTagsData = await getToolTagsData();
+  const GetToolsData = getToolsData();
+  const GetTagsData = getToolTagsData();
 
   // Wait for the promises to resolve
   const [ToolsData, TagsData] = await Promise.all([GetToolsData, GetTagsData]);

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
-import { getProgramData, getProgramTagsData } from "@/data";
+import type { ProgramType } from "@/types";
+
+import { getProgramData, getProgramTagsData, getProgramsData } from "@/data";
 
 import Breadcrumb from "@/components/Breadcrumb";
 import MarkdownPreview from "@/components/MarkdownPreview";
@@ -46,6 +48,17 @@ export async function generateMetadata({
   };
 }
 
+// Make this page statically generated, with dynamic params
+export const dynamicParams = true;
+export async function generateStaticParams() {
+  const ProgramsData = await getProgramsData();
+
+  return ProgramsData.slice(0, 1).map((programData: ProgramType) => ({
+    slug: programData.slug,
+  }));
+}
+// End of static generation
+
 export default async function ProgramDetailPage({
   params,
 }: {
@@ -54,8 +67,8 @@ export default async function ProgramDetailPage({
   const slug = params.slug;
 
   // Initiate both requests in parallel
-  const GetProgramData = await getProgramData(slug);
-  const GetTagsData = await getProgramTagsData();
+  const GetProgramData = getProgramData(slug);
+  const GetTagsData = getProgramTagsData();
 
   // Wait for the promises to resolve
   const [ProgramData, TagsData] = await Promise.all([

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import type { ToolType } from "@/types";
+import type { ToolType, ToolTagType } from "@/types";
 
 import { getFilteredToolsData, getToolTagsData } from "@/data";
 
@@ -25,6 +25,17 @@ export async function generateMetadata({
   };
 }
 
+// Make this page statically generated, with dynamic params
+export const dynamicParams = true;
+export async function generateStaticParams() {
+  const TagsData = await getToolTagsData();
+
+  return TagsData.slice(0, 1).map((tagData: ToolTagType) => ({
+    tag: tagData.name,
+  }));
+}
+// End of static generation
+
 export default async function ToolTagPage({
   params,
 }: {
@@ -33,8 +44,8 @@ export default async function ToolTagPage({
   const tag = params.tag;
 
   // Initiate both requests in parallel
-  const getToolsData = await getFilteredToolsData(tag);
-  const getTagsData = await getToolTagsData();
+  const getToolsData = getFilteredToolsData(tag);
+  const getTagsData = getToolTagsData();
 
   // Wait for the promises to resolve
   const [ToolsData, TagsData] = await Promise.all([getToolsData, getTagsData]);

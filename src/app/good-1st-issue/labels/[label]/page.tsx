@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import type { Good1stIssueType } from "@/types";
+import type { Good1stIssueType, Good1stIssueLabelType } from "@/types";
 
 import {
   getFilteredGood1stIssuesData,
@@ -27,6 +27,19 @@ export async function generateMetadata({
   };
 }
 
+// Make this page statically generated, with dynamic params
+export const dynamicParams = true;
+export async function generateStaticParams() {
+  const Good1stIssuesLabelsData = await getGood1stIssueLabelsData();
+
+  return Good1stIssuesLabelsData.slice(0, 1).map(
+    (labelData: Good1stIssueLabelType) => ({
+      label: labelData.label,
+    })
+  );
+}
+// End of static generation
+
 export default async function Good1stIssueLabelPage({
   params,
 }: {
@@ -35,7 +48,7 @@ export default async function Good1stIssueLabelPage({
   const label = params.label;
 
   // Initiate both requests in parallel
-  const Good1stIssuesData = await getFilteredGood1stIssuesData(label);
+  const Good1stIssuesData = getFilteredGood1stIssuesData(label);
   const Good1stIssuesLabelsData = getGood1stIssueLabelsData();
 
   // Wait for the promises to resolve

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
-import { getToolData, getToolTagsData } from "@/data";
+import type { ToolType } from "@/types";
+
+import { getToolData, getToolTagsData, getToolsData } from "@/data";
 
 import Breadcrumb from "@/components/Breadcrumb";
 import MarkdownPreview from "@/components/MarkdownPreview";
@@ -24,6 +26,17 @@ export async function generateMetadata({
   };
 }
 
+// Make this page statically generated, with dynamic params
+export const dynamicParams = true;
+export async function generateStaticParams() {
+  const ToolsData = await getToolsData();
+
+  return ToolsData.slice(0, 1).map((toolData: ToolType) => ({
+    slug: toolData.slug,
+  }));
+}
+// End of static generation
+
 export default async function ToolDetailPage({
   params,
 }: {
@@ -32,8 +45,8 @@ export default async function ToolDetailPage({
   const slug = params.slug;
 
   // Initiate both requests in parallel
-  const GetToolData = await getToolData(slug);
-  const getTagsData = await getToolTagsData();
+  const GetToolData = getToolData(slug);
+  const getTagsData = getToolTagsData();
 
   // Wait for the promises to resolve
   const [ToolData, TagsData] = await Promise.all([GetToolData, getTagsData]);

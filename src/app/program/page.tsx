@@ -14,8 +14,8 @@ export const metadata = {
 
 export default async function ProgramPage() {
   // Initiate both requests in parallel
-  const GetProgramsData = await getProgramsData();
-  const GetTagsData = await getProgramTagsData();
+  const GetProgramsData = getProgramsData();
+  const GetTagsData = getProgramTagsData();
 
   // Wait for the promises to resolve
   const [ProgramsData, TagsData] = await Promise.all([

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import type { ProgramType } from "@/types";
+import type { ProgramType, ProgramLanguageCountTagType } from "@/types";
 
 import { getFilteredProgramsData, getProgramTagsData } from "@/data";
 
@@ -24,6 +24,17 @@ export async function generateMetadata({
   };
 }
 
+// Make this page statically generated, with dynamic params
+export const dynamicParams = true;
+export async function generateStaticParams() {
+  const TagsData = await getProgramTagsData();
+
+  return TagsData.slice(0, 1).map((tagData: ProgramLanguageCountTagType) => ({
+    tag: tagData.name,
+  }));
+}
+// End of static generation
+
 export default async function ProgramTagPage({
   params,
 }: {
@@ -32,8 +43,8 @@ export default async function ProgramTagPage({
   const tag = params.tag;
 
   // Initiate both requests in parallel
-  const GetProgramsData = await getFilteredProgramsData(tag);
-  const GetTagsData = await getProgramTagsData();
+  const GetProgramsData = getFilteredProgramsData(tag);
+  const GetTagsData = getProgramTagsData();
 
   // Wait for the promises to resolve
   const [ProgramsData, TagsData] = await Promise.all([
