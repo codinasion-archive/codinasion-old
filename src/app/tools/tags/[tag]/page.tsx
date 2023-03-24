@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
-import type { ProgramType, ProgramLanguageCountTagType } from "@/types";
+import type { ToolType, ToolTagType } from "@/types";
 
-import { getFilteredProgramsData, getProgramTagsData } from "@/data";
+import { getFilteredToolsData, getToolTagsData } from "@/data";
 
 import Breadcrumb from "@/components/Breadcrumb";
-import ProgramCard from "@/components/Program/ProgramCard";
-import LanguageCard from "@/components/Program/LanguageCard";
+import ToolCard from "@/components/Tool/ToolCard";
+import TagsCard from "@/components/Tool/TagsCard";
 import GithubRepoCard from "@/components/GithubRepoCard";
 
 export async function generateMetadata({
@@ -19,23 +19,24 @@ export async function generateMetadata({
     title: `${tag.replace(
       /\w\S*/g,
       (txt) => txt.charAt(0).toUpperCase() + txt.substr(1)
-    )} | Programs`,
-    description: "An open-source codebase for sharing programming solutions.",
+    )} | Tools`,
+    description:
+      "A collection of open source tools, written in TypeScript, that can be used in any JavaScript project.",
   };
 }
 
 // Make this page statically generated, with dynamic params
 export const dynamicParams = true;
 export async function generateStaticParams() {
-  const TagsData = await getProgramTagsData();
+  const TagsData = await getToolTagsData();
 
-  return TagsData.slice(0, 1).map((tagData: ProgramLanguageCountTagType) => ({
+  return TagsData.slice(0, 1).map((tagData: ToolTagType) => ({
     tag: tagData.name,
   }));
 }
 // End of static generation
 
-export default async function ProgramTagPage({
+export default async function ToolTagPage({
   params,
 }: {
   params: { tag: string };
@@ -43,14 +44,11 @@ export default async function ProgramTagPage({
   const tag = params.tag;
 
   // Initiate both requests in parallel
-  const GetProgramsData = getFilteredProgramsData(tag);
-  const GetTagsData = getProgramTagsData();
+  const getToolsData = getFilteredToolsData(tag);
+  const getTagsData = getToolTagsData();
 
   // Wait for the promises to resolve
-  const [ProgramsData, TagsData] = await Promise.all([
-    GetProgramsData,
-    GetTagsData,
-  ]);
+  const [ToolsData, TagsData] = await Promise.all([getToolsData, getTagsData]);
 
   return (
     <>
@@ -61,8 +59,8 @@ export default async function ProgramTagPage({
             url: "/",
           },
           {
-            title: "Program",
-            url: "/program",
+            title: "Tools",
+            url: "/tools",
           },
           {
             title: "Tags",
@@ -77,15 +75,15 @@ export default async function ProgramTagPage({
       />
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
         <div className="md:col-span-4">
-          {ProgramsData.map((program: ProgramType) => (
-            <ProgramCard key={program.title} ProgramData={program} />
+          {ToolsData.map((tool: ToolType) => (
+            <ToolCard key={tool.title} ToolData={tool} />
           ))}
         </div>
         <div className="md:col-span-2">
-          <LanguageCard TagsData={TagsData} />
+          <TagsCard TagsData={TagsData} />
 
           {/* @ts-expect-error Async Server Component */}
-          <GithubRepoCard full_name="codinasion/program" />
+          <GithubRepoCard full_name="codinasion/tools" />
         </div>
       </div>
     </>

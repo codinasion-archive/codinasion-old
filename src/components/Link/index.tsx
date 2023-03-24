@@ -34,7 +34,7 @@ export default function CustomLinkComponent({
         >
           {children}
           {externalIcon && (
-            <FiExternalLink className="inline-block ml-1 text-sm text-gray-500" />
+            <FiExternalLink className="inline-block ml-1 mb-1 text-sm text-gray-500" />
           )}
         </Link>
       ) : (

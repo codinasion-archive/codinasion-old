@@ -11,6 +11,8 @@ const config = {
     "/sitemap-good-1st-issue-labels.xml",
     "/tools/**",
     "/sitemap-tools.xml",
+    "/tools/tags/**",
+    "/sitemap-tools-tags.xml",
   ],
   robotsTxtOptions: {
     additionalSitemaps: [
@@ -18,6 +20,7 @@ const config = {
       `${"https://codinasion.org"}/sitemap-program-tags.xml`,
       `${"https://codinasion.org"}/sitemap-good-1st-issue-labels.xml`,
       `${"https://codinasion.org"}/sitemap-tools.xml`,
+      `${"https://codinasion.org"}/sitemap-tools-tags.xml`,
     ],
   },
 };

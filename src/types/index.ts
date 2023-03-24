@@ -5,6 +5,7 @@ import { Good1stIssueType, Good1stIssueLabelType } from "./Good1stIssue";
 import type { NavbarLinkType } from "./Navbar";
 import type { ProgramType, ProgramLanguageCountTagType } from "./Program";
 import type { ProjectType } from "./Project";
+import type { ToolType, ToolTagType } from "./Tool";
 
 export type {
   BreadcrumbType,
@@ -17,4 +18,6 @@ export type {
   ProgramType,
   ProgramLanguageCountTagType,
   ProjectType,
+  ToolType,
+  ToolTagType,
 };

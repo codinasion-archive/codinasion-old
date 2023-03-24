@@ -55,6 +55,11 @@ const nextConfig = {
         destination: "/good-1st-issue/:path*",
         permanent: true,
       },
+      {
+        source: "/tool/:path*",
+        destination: "/tools/:path*",
+        permanent: true,
+      },
     ];
   },
   images: {
