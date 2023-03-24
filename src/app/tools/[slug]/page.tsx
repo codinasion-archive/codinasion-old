@@ -9,7 +9,7 @@ import MarkdownPreview from "@/components/MarkdownPreview";
 import Comment from "@/components/Comment";
 import AvailableTagsCard from "@/components/Tool/AvailableTagsCard";
 import TagsCard from "@/components/Tool/TagsCard";
-import RepoCard from "@/components/RepoCard";
+import GithubRepoCard from "@/components/GithubRepoCard";
 
 export async function generateMetadata({
   params,
@@ -83,7 +83,7 @@ ${ToolData.source_code}`}</MarkdownPreview>
           <AvailableTagsCard tags={ToolData.tags} />
 
           {/* @ts-expect-error Async Server Component */}
-          <RepoCard full_name="codinasion/tools" />
+          <GithubRepoCard full_name="codinasion/tools" />
 
           <TagsCard TagsData={TagsData} />
         </div>
