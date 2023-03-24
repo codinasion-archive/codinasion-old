@@ -10,6 +10,7 @@ export default function ToolCard({ ToolData }: ToolCardProps) {
   return (
     <>
       <Link
+        key={ToolData.slug}
         href={`/tools/${ToolData.slug}`}
         className="block p-3 mb-4 rounded-lg shadow-lg hover:shadow-2xl card_bg"
         externalIcon={false}

@@ -23,24 +23,24 @@ const MdxComponents = {
   h1: (props: any) => (
     <>
       <h1 className="text-3xl font-bold" {...props} />
-      <hr className="mt-2 mb-5 sm:mx-auto" />
+      <hr className="mt-2 mb-5 sm:mx-auto border-gray-400 dark:border-gray-600" />
     </>
   ),
   h2: (props: any) => (
     <>
-      <h2 className="text-2xl font-bold" {...props} />
-      <hr className="mt-2 mb-5 sm:mx-auto" />
+      <h2 className="text-2xl font-bold pt-4" {...props} />
+      <hr className="mt-2 mb-5 sm:mx-auto border-gray-400 dark:border-gray-600" />
     </>
   ),
   h3: (props: any) => (
     <>
-      <h3 className="text-xl my-2 font-bold" {...props} />
+      <h3 className="text-xl pt-4 mb-2 font-bold" {...props} />
     </>
   ),
   h4: (props: any) => <h4 className="text-lg my-2 font-bold" {...props} />,
   h5: (props: any) => <h5 className="text-md my-2 font-bold" {...props} />,
   h6: (props: any) => <h6 className="text-sm my-2 font-bold" {...props} />,
-  p: (props: any) => <p className="mt-2 mb-5 text-base" {...props} />,
+  p: (props: any) => <p className="mt-2 mb-4 text-base" {...props} />,
   strong: (props: any) => <strong className="font-bold" {...props} />,
   em: (props: any) => <em className="italic" {...props} />,
   del: (props: any) => <del className="line-through" {...props} />,
@@ -48,7 +48,7 @@ const MdxComponents = {
   // Link
   a: (props: any) => (
     <Link
-      className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
+      className="text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
       {...props}
     />
   ),
@@ -112,7 +112,7 @@ const MdxComponents = {
 
   // Horizontal Rule
   hr: (props: any) => (
-    <hr className="my-4 border-gray-300 dark:border-gray-600" {...props} />
+    <hr className="my-4 border-gray-400 dark:border-gray-600" {...props} />
   ),
 };
 

@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 
-import { getProgramData } from "@/data";
+import type { ProgramType } from "@/types";
+
+import { getProgramData, getProgramTagsData, getProgramsData } from "@/data";
 
 import Breadcrumb from "@/components/Breadcrumb";
 import MarkdownPreview from "@/components/MarkdownPreview";
 import Comment from "@/components/Comment";
 import AvailableSolutionCard from "@/components/Program/AvailableSolutionCard";
 import ContributorsCard from "@/components/Program/ContributorsCard";
+import RepoCard from "@/components/RepoCard";
+import LanguageCard from "@/components/Program/LanguageCard";
 
 export async function generateMetadata({
   params,
@@ -44,6 +48,17 @@ export async function generateMetadata({
   };
 }
 
+// Make this page statically generated, with dynamic params
+export const dynamicParams = true;
+export async function generateStaticParams() {
+  const ProgramsData = await getProgramsData();
+
+  return ProgramsData.slice(0, 1).map((programData: ProgramType) => ({
+    slug: programData.slug,
+  }));
+}
+// End of static generation
+
 export default async function ProgramDetailPage({
   params,
 }: {
@@ -51,7 +66,15 @@ export default async function ProgramDetailPage({
 }) {
   const slug = params.slug;
 
-  const ProgramData = await getProgramData(slug);
+  // Initiate both requests in parallel
+  const GetProgramData = getProgramData(slug);
+  const GetTagsData = getProgramTagsData();
+
+  // Wait for the promises to resolve
+  const [ProgramData, TagsData] = await Promise.all([
+    GetProgramData,
+    GetTagsData,
+  ]);
 
   return (
     <>
@@ -82,7 +105,13 @@ export default async function ProgramDetailPage({
             tags={ProgramData.tags}
             trackId={ProgramData.trackId}
           />
+
           <ContributorsCard contributors={ProgramData.contributors} />
+
+          {/* @ts-expect-error Async Server Component */}
+          <RepoCard full_name="codinasion/program" />
+
+          <LanguageCard TagsData={TagsData} />
         </div>
       </div>
     </>

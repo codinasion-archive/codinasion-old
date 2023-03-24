@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import type { Good1stIssueType } from "@/types";
+import type { Good1stIssueType, Good1stIssueLabelType } from "@/types";
 
 import {
   getFilteredGood1stIssuesData,
@@ -10,6 +10,7 @@ import {
 import Breadcrumb from "@/components/Breadcrumb";
 import Good1stIssueCard from "@/components/Good1stIssue/Good1stIssueCard";
 import LabelsCard from "@/components/Good1stIssue/LabelsCard";
+import RepoCard from "@/components/RepoCard";
 
 export async function generateMetadata({
   params,
@@ -26,6 +27,19 @@ export async function generateMetadata({
   };
 }
 
+// Make this page statically generated, with dynamic params
+export const dynamicParams = true;
+export async function generateStaticParams() {
+  const Good1stIssuesLabelsData = await getGood1stIssueLabelsData();
+
+  return Good1stIssuesLabelsData.slice(0, 1).map(
+    (labelData: Good1stIssueLabelType) => ({
+      label: labelData.label,
+    })
+  );
+}
+// End of static generation
+
 export default async function Good1stIssueLabelPage({
   params,
 }: {
@@ -34,7 +48,7 @@ export default async function Good1stIssueLabelPage({
   const label = params.label;
 
   // Initiate both requests in parallel
-  const Good1stIssuesData = await getFilteredGood1stIssuesData(label);
+  const Good1stIssuesData = getFilteredGood1stIssuesData(label);
   const Good1stIssuesLabelsData = getGood1stIssueLabelsData();
 
   // Wait for the promises to resolve
@@ -77,6 +91,9 @@ export default async function Good1stIssueLabelPage({
         </div>
         <div className="md:col-span-2">
           <LabelsCard LabelsData={LabelsData} />
+
+          {/* @ts-expect-error Async Server Component */}
+          <RepoCard full_name="codinasion/good-1st-issue" />
         </div>
       </div>
     </>

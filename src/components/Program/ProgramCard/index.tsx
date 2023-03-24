@@ -11,6 +11,7 @@ export default function ProgramCard({ ProgramData }: ProgramCardProps) {
   return (
     <>
       <Link
+        key={ProgramData.slug}
         href={`/program/${ProgramData.slug}`}
         className="block p-3 mb-4 rounded-lg shadow-lg hover:shadow-2xl card_bg"
         externalIcon={false}

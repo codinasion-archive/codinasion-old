@@ -5,6 +5,7 @@ import { getProgramsData, getProgramTagsData } from "@/data";
 import Breadcrumb from "@/components/Breadcrumb";
 import ProgramCard from "@/components/Program/ProgramCard";
 import LanguageCard from "@/components/Program/LanguageCard";
+import RepoCard from "@/components/RepoCard";
 
 export const metadata = {
   title: "Program",
@@ -12,8 +13,15 @@ export const metadata = {
 };
 
 export default async function ProgramPage() {
-  const ProgramsData = await getProgramsData();
-  const TagsData = await getProgramTagsData();
+  // Initiate both requests in parallel
+  const GetProgramsData = getProgramsData();
+  const GetTagsData = getProgramTagsData();
+
+  // Wait for the promises to resolve
+  const [ProgramsData, TagsData] = await Promise.all([
+    GetProgramsData,
+    GetTagsData,
+  ]);
 
   return (
     <>
@@ -36,6 +44,9 @@ export default async function ProgramPage() {
         </div>
         <div className="md:col-span-2">
           <LanguageCard TagsData={TagsData} />
+
+          {/* @ts-expect-error Async Server Component */}
+          <RepoCard full_name="codinasion/program" />
         </div>
       </div>
     </>

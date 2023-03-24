@@ -5,6 +5,7 @@ import { getGood1stIssuesData, getGood1stIssueLabelsData } from "@/data";
 import Breadcrumb from "@/components/Breadcrumb";
 import Good1stIssueCard from "@/components/Good1stIssue/Good1stIssueCard";
 import LabelsCard from "@/components/Good1stIssue/LabelsCard";
+import RepoCard from "@/components/RepoCard";
 
 export const metadata = {
   title: "Good 1st Issue",
@@ -46,6 +47,9 @@ export default async function Good1stIssuePage() {
         </div>
         <div className="md:col-span-2">
           <LabelsCard LabelsData={LabelsData} />
+
+          {/* @ts-expect-error Async Server Component */}
+          <RepoCard full_name="codinasion/good-1st-issue" />
         </div>
       </div>
     </>

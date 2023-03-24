@@ -5,6 +5,7 @@ import { getToolsData, getToolTagsData } from "@/data";
 import Breadcrumb from "@/components/Breadcrumb";
 import ToolCard from "@/components/Tool/ToolCard";
 import TagsCard from "@/components/Tool/TagsCard";
+import RepoCard from "@/components/RepoCard";
 
 export const metadata = {
   title: "Tool",
@@ -14,8 +15,8 @@ export const metadata = {
 
 export default async function ToolPage() {
   // Initiate both requests in parallel
-  const GetToolsData = await getToolsData();
-  const GetTagsData = await getToolTagsData();
+  const GetToolsData = getToolsData();
+  const GetTagsData = getToolTagsData();
 
   // Wait for the promises to resolve
   const [ToolsData, TagsData] = await Promise.all([GetToolsData, GetTagsData]);
@@ -41,6 +42,9 @@ export default async function ToolPage() {
         </div>
         <div className="md:col-span-2">
           <TagsCard TagsData={TagsData} />
+
+          {/* @ts-expect-error Async Server Component */}
+          <RepoCard full_name="codinasion/tools" />
         </div>
       </div>
     </>

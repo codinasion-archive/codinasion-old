@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 
-import { getToolData, getToolTagsData } from "@/data";
+import type { ToolType } from "@/types";
+
+import { getToolData, getToolTagsData, getToolsData } from "@/data";
 
 import Breadcrumb from "@/components/Breadcrumb";
 import MarkdownPreview from "@/components/MarkdownPreview";
 import Comment from "@/components/Comment";
 import AvailableTagsCard from "@/components/Tool/AvailableTagsCard";
 import TagsCard from "@/components/Tool/TagsCard";
+import RepoCard from "@/components/RepoCard";
 
 export async function generateMetadata({
   params,
@@ -23,6 +26,17 @@ export async function generateMetadata({
   };
 }
 
+// Make this page statically generated, with dynamic params
+export const dynamicParams = true;
+export async function generateStaticParams() {
+  const ToolsData = await getToolsData();
+
+  return ToolsData.slice(0, 1).map((toolData: ToolType) => ({
+    slug: toolData.slug,
+  }));
+}
+// End of static generation
+
 export default async function ToolDetailPage({
   params,
 }: {
@@ -31,8 +45,8 @@ export default async function ToolDetailPage({
   const slug = params.slug;
 
   // Initiate both requests in parallel
-  const GetToolData = await getToolData(slug);
-  const getTagsData = await getToolTagsData();
+  const GetToolData = getToolData(slug);
+  const getTagsData = getToolTagsData();
 
   // Wait for the promises to resolve
   const [ToolData, TagsData] = await Promise.all([GetToolData, getTagsData]);
@@ -67,6 +81,10 @@ ${ToolData.source_code}`}</MarkdownPreview>
         </div>
         <div className="md:col-span-2">
           <AvailableTagsCard tags={ToolData.tags} />
+
+          {/* @ts-expect-error Async Server Component */}
+          <RepoCard full_name="codinasion/tools" />
+
           <TagsCard TagsData={TagsData} />
         </div>
       </div>
