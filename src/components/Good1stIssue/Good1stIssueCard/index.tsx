@@ -15,6 +15,7 @@ export default function Good1stIssueCard({
   return (
     <>
       <Link
+        key={Good1stIssueData.issue_title}
         href={`${Good1stIssueData.issue_url}`}
         className="block p-3 mb-4 rounded-lg shadow-lg hover:shadow-2xl card_bg"
         externalIcon={false}

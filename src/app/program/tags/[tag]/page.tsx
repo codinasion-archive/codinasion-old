@@ -7,6 +7,7 @@ import { getFilteredProgramsData, getProgramTagsData } from "@/data";
 import Breadcrumb from "@/components/Breadcrumb";
 import ProgramCard from "@/components/Program/ProgramCard";
 import LanguageCard from "@/components/Program/LanguageCard";
+import RepoCard from "@/components/RepoCard";
 
 export async function generateMetadata({
   params,
@@ -71,6 +72,9 @@ export default async function ProgramTagPage({
         </div>
         <div className="md:col-span-2">
           <LanguageCard TagsData={TagsData} />
+
+          {/* @ts-expect-error Async Server Component */}
+          <RepoCard full_name="codinasion/program" />
         </div>
       </div>
     </>

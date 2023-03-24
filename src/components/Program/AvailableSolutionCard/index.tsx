@@ -13,7 +13,7 @@ export default function AvailableSolutionCard({
 }: AvailableSolutionCardProps) {
   return (
     <>
-      <div className="block p-5 mb-2 rounded-lg shadow-xl hover:shadow-2xl card_bg">
+      <div className="block p-5 mb-5 rounded-lg shadow-xl hover:shadow-2xl card_bg">
         <h5 className="text-lg md:text-xl font-bold text-center">
           Available Solutions
         </h5>

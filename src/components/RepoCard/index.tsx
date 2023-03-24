@@ -14,9 +14,9 @@ export default async function RepoCard({ full_name }: { full_name: string }) {
       <Link
         href={RepoData.html_url}
         externalIcon={false}
-        className="block p-5 mb-2 rounded-lg shadow-xl hover:shadow-2xl card_bg"
+        className="block p-5 my-5 rounded-lg shadow-xl hover:shadow-2xl card_bg"
       >
-        <h5 className="text-lg md:text-xl font-bold">
+        <h5 className="text-lg font-bold">
           <VscRepo className="inline-block" /> {RepoData.full_name}
         </h5>
         <span className="text-sm text-gray-500 dark:text-gray-400">
