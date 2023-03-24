@@ -30,8 +30,15 @@ export default async function ProgramTagPage({
 }) {
   const tag = params.tag;
 
-  const ProgramsData = await getFilteredProgramsData(tag);
-  const TagsData = await getProgramTagsData();
+  // Initiate both requests in parallel
+  const GetProgramsData = await getFilteredProgramsData(tag);
+  const GetTagsData = await getProgramTagsData();
+
+  // Wait for the promises to resolve
+  const [ProgramsData, TagsData] = await Promise.all([
+    GetProgramsData,
+    GetTagsData,
+  ]);
 
   return (
     <>

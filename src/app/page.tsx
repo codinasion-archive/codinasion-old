@@ -21,7 +21,7 @@ export default function HomePage() {
               Our all time favorite repo by developers is{" "}
               <Link
                 href="https://github.com/codinasion/program"
-                target="_blank"
+                externalIcon={false}
                 className="text-indigo-600 dark:text-indigo-200 hover:text-indigo-500 dark:hover:text-indigo-100 rounded-md mx-1 p-1 bg-slate-300 dark:bg-slate-700"
               >
                 Program
@@ -33,7 +33,7 @@ export default function HomePage() {
             <div className="mt-8 flex gap-x-4 sm:justify-center">
               <Link
                 href="https://github.com/codinasion"
-                target="_blank"
+                externalIcon={false}
                 className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
               >
                 Contribute Now
