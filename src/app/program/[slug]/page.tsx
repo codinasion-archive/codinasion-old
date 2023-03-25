@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import type { ProgramType } from "@/types";
 
-import { getProgramData, getProgramTagsData, getProgramsData } from "@/data";
+import { getProgramData, getProgramTagsData, getProgramsData, SiteMetadata } from "@/data";
 
 import Breadcrumb from "@/components/Breadcrumb";
 import MarkdownPreview from "@/components/MarkdownPreview";
@@ -29,6 +29,8 @@ export async function generateMetadata({
     openGraph: {
       title: ProgramData.title,
       description: `Write a program to ${ProgramData.title.toLowerCase()}`,
+      url: `${SiteMetadata.site_url}/program/${slug}`,
+      siteName: SiteMetadata.title,
       images: [
         {
           url: `${process.env.NEXT_PUBLIC_API_URL}/og?path=/program/${slug}`,
@@ -37,12 +39,18 @@ export async function generateMetadata({
           alt: ProgramData.title,
         },
       ],
+      locale: "en-US",
+      type: "website",
     },
 
     // Twitter Card
     twitter: {
+      card: "summary_large_image",
       title: ProgramData.title,
       description: `Write a program to ${ProgramData.title.toLowerCase()}`,
+      siteId: SiteMetadata.twitter_userid,
+      creator: SiteMetadata.twitter_username,
+      creatorId: SiteMetadata.twitter_userid,
       images: [`${process.env.NEXT_PUBLIC_API_URL}/og?path=/program/${slug}`],
     },
   };
