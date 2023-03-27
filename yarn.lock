@@ -9,6 +9,14 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
+"@codinasion/language@codinasion/language":
+  version "0.2.0"
+  resolved "https://codeload.github.com/codinasion/language/tar.gz/651317ca77e2644f929417ad15cda8377bc19837"
+
+"@codinasion/tools@codinasion/tools":
+  version "0.0.3"
+  resolved "https://codeload.github.com/codinasion/tools/tar.gz/e6789c5cfaf009509799b84ab99c567ec10c6a5f"
+
 "@corex/deepmerge@^4.0.37":
   version "4.0.37"
   resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-4.0.37.tgz#873dcf71aee46596d7e385437b0d94770ef4c85f"

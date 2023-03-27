@@ -11,6 +11,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codinasion/language": "codinasion/language",
+    "@codinasion/tools": "codinasion/tools",
     "@giscus/react": "^2.2.8",
     "@headlessui/react": "^1.7.13",
     "@next/env": "^13.2.4",

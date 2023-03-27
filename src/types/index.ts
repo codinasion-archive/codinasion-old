@@ -1,7 +1,8 @@
 import type { BreadcrumbType } from "./Breadcrumb";
 import type { ContributorType } from "./Contributor";
 import type { FooterLinkType, FooterLinksType } from "./Footer";
-import { Good1stIssueType, Good1stIssueLabelType } from "./Good1stIssue";
+import type { Good1stIssueType, Good1stIssueLabelType } from "./Good1stIssue";
+import type {GoodFirstIssueLabelType} from "./GoodFirstIssue";
 import type { NavbarLinkType } from "./Navbar";
 import type { ProgramType, ProgramLanguageCountTagType } from "./Program";
 import type { ProjectType } from "./Project";
@@ -14,6 +15,7 @@ export type {
   FooterLinksType,
   Good1stIssueType,
   Good1stIssueLabelType,
+  GoodFirstIssueLabelType,
   NavbarLinkType,
   ProgramType,
   ProgramLanguageCountTagType,

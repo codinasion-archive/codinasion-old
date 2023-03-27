@@ -21,8 +21,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/good-first-issue/:path*",
-        destination: "/good-1st-issue/:path*",
+        source: "/good-first-issues/:path*",
+        destination: "/good-first-issue/:path*",
         permanent: true,
       },
       {
@@ -37,12 +37,12 @@ const nextConfig = {
       },
       {
         source: "/goodfirstissue/:path*",
-        destination: "/good-1st-issue/:path*",
+        destination: "/good-first-issue/:path*",
         permanent: true,
       },
       {
         source: "/goodfirstissues/:path*",
-        destination: "/good-1st-issue/:path*",
+        destination: "/good-first-issue/:path*",
         permanent: true,
       },
       {
@@ -71,6 +71,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "raw.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "user-images.githubusercontent.com",
       },
     ],
   },
