@@ -4,7 +4,7 @@ export async function getToolsData() {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch toolsdata => " + res);
+    throw new Error("Failed to fetch toolsdata => " + res.json());
   }
 
   return res.json();
@@ -19,7 +19,7 @@ export async function getFilteredToolsData(tag = "") {
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch filtered tools data => " + res);
+    throw new Error("Failed to fetch filtered tools data => " + res.json());
   }
 
   return res.json();
@@ -31,7 +31,7 @@ export async function getToolTagsData() {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch tool tags data => " + res);
+    throw new Error("Failed to fetch tool tags data => " + res.json());
   }
 
   return res.json();
@@ -43,7 +43,7 @@ export async function getToolData(slug: string) {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch tool slug data => " + res);
+    throw new Error("Failed to fetch tool slug data => " + res.json());
   }
 
   return res.json();

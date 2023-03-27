@@ -4,7 +4,7 @@ export async function getProgramsData() {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch program data => " + res);
+    throw new Error("Failed to fetch program data => " + res.json());
   }
 
   return res.json();
@@ -19,7 +19,7 @@ export async function getFilteredProgramsData(tag = "") {
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch filtered program data => " + res);
+    throw new Error("Failed to fetch filtered program data => " + res.json());
   }
 
   return res.json();
@@ -31,7 +31,7 @@ export async function getProgramTagsData() {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch program tags data => " + res);
+    throw new Error("Failed to fetch program tags data => " + res.json());
   }
 
   return res.json();
@@ -46,7 +46,7 @@ export async function getProgramData(slug: string) {
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch program slug data => " + res);
+    throw new Error("Failed to fetch program slug data => " + res.json());
   }
 
   return res.json();

@@ -4,7 +4,7 @@ export async function getContributorsData() {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch contributors data => " + res);
+    throw new Error("Failed to fetch contributors data => " + res.json());
   }
 
   return res.json();
