@@ -4,7 +4,7 @@ export async function getGood1stIssuesData() {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    throw new Error("Failed to fetch fgi data => " + res);
   }
 
   return res.json();
@@ -19,7 +19,7 @@ export async function getFilteredGood1stIssuesData(label = "") {
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    throw new Error("Failed to fetch filtered gfi data => " + res);
   }
 
   return res.json();
@@ -34,7 +34,7 @@ export async function getGood1stIssueLabelsData() {
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    throw new Error("Failed to fetch gfi labels data => " + res);
   }
 
   return res.json();

@@ -9,7 +9,7 @@ export async function getGithubRepoData(
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    throw new Error("Failed to fetch repo data => " + res);
   }
 
   return res.json();
@@ -24,7 +24,7 @@ export async function getGithubAppData(slug: string = "good1stissue") {
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    throw new Error("Failed to fetch app data => " + res);
   }
 
   return res.json();

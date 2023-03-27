@@ -126,7 +126,7 @@ export async function getGoodFirstIssuesData({
 
   if (!res.ok) {
     throw new Error(
-      `Failed to fetch 'Good First Issue' data for page_number '${page_number}'`
+      `Failed to fetch 'Good First Issue' data for page_number '${page_number}' => ${res}`
     );
   }
 
