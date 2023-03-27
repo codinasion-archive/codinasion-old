@@ -1,0 +1,13 @@
+name: Add a new label to the `good-first-issue` page
+description:
+title: "Request for adding a new label: [LABEL NAME]"
+labels: []
+assignees: "harshraj8843"
+body:
+  - type: input
+    id: label
+    attributes:
+      label: Label
+      placeholder: Insert the label name
+    validations:
+      required: true

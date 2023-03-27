@@ -1,9 +1,10 @@
-import { getGoodFirstIssuesData } from "@/data";
+import { getGoodFirstIssuesData, GoodFirstIssueRepos } from "@/data";
 
 import Breadcrumb from "@/components/Breadcrumb";
 
 import GoodFirstIssueCard from "@/components/GoodFirstIssue/GoodFirstIssueCard";
 import LabelsCard from "@/components/GoodFirstIssue/LabelsCard";
+import GithubRepoCard from "@/components/GithubRepoCard";
 
 export const metadata = {
   title: "Good First Issue",
@@ -11,9 +12,7 @@ export const metadata = {
 };
 
 export default async function GoodFirstIssuePage() {
-  const GoodFirstIssuesData = await getGoodFirstIssuesData({
-    per_page: 10,
-  });
+  const GoodFirstIssuesData = await getGoodFirstIssuesData({});
 
   return (
     <>
@@ -36,6 +35,13 @@ export default async function GoodFirstIssuePage() {
         </div>
         <div className="md:col-span-2">
           <LabelsCard />
+
+          {GoodFirstIssueRepos.map((repo: any) => (
+            <>
+              {/* @ts-expect-error Async Server Component */}
+              <GithubRepoCard key={repo.full_name} full_name={repo.full_name} />
+            </>
+          ))}
         </div>
       </div>
     </>

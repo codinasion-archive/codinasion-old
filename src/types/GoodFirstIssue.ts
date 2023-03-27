@@ -1,7 +1,6 @@
-
 type GoodFirstIssueLabelType = {
-  name : string;
-  logo : string;
+  name: string;
+  logo: string;
 };
 
-export type {  GoodFirstIssueLabelType };
+export type { GoodFirstIssueLabelType };

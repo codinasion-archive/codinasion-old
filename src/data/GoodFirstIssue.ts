@@ -99,6 +99,15 @@ export const GoodFirstIssueLabels = [
   },
 ];
 
+export const GoodFirstIssueRepos = [
+  {
+    full_name: "codinasion/program",
+  },
+  {
+    full_name: "codinasion/hello-world",
+  },
+];
+
 export async function getGoodFirstIssuesData({
   page_number = 1,
   per_page = 100,

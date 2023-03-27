@@ -39,12 +39,13 @@ export default async function Good1stIssuePage() {
       />
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
         <div className="md:col-span-4">
-          {IssueData.map((issue: Good1stIssueType) => (
-            <Good1stIssueCard
-              key={issue.issue_title}
-              Good1stIssueData={issue}
-            />
-          ))}
+          {IssueData &&
+            IssueData.map((issue: Good1stIssueType) => (
+              <Good1stIssueCard
+                key={issue.issue_title}
+                Good1stIssueData={issue}
+              />
+            ))}
         </div>
         <div className="md:col-span-2">
           <LabelsCard LabelsData={LabelsData} />

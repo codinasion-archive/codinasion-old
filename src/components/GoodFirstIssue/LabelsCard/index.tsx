@@ -16,7 +16,9 @@ export default function LabelsCard({
         <h5 className="text-lg md:text-xl font-bold text-center">
           Browse By Label
         </h5>
+
         <hr className="my-2 border-gray-500 sm:mx-auto" />
+
         <div className="row">
           {LabelsData.map((label: GoodFirstIssueLabelType) => (
             <Link
@@ -38,6 +40,28 @@ export default function LabelsCard({
               </div>
             </Link>
           ))}
+        </div>
+
+        <hr className="my-2 border-gray-500 sm:mx-auto" />
+
+        <div className="mt-5">
+          <Link
+            href={`https://github.com/codinasion/codinasion/issues/new?template=good-first-issue-add-label.yml`}
+            className="block w-full text-center text-md bg-blue-500 p-2 rounded-md text-white"
+            externalIcon={false}
+          >
+            <span className="font-bold">Add a new Label</span>
+          </Link>
+        </div>
+
+        <div className="mt-5">
+          <Link
+            href={`https://github.com/codinasion/codinasion/issues/new?template=good-first-issue-feature-repo.yml`}
+            className="block w-full text-center text-md bg-blue-500 p-2 rounded-md text-white"
+            externalIcon={false}
+          >
+            <span className="font-bold">Feature a repository</span>
+          </Link>
         </div>
       </div>
     </>

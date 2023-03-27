@@ -33,11 +33,15 @@ export const dynamicParams = true;
 export async function generateStaticParams() {
   const Good1stIssuesLabelsData = await getGood1stIssueLabelsData();
 
-  return Good1stIssuesLabelsData.slice(0, 1).map(
-    (labelData: Good1stIssueLabelType) => ({
-      label: labelData.label,
-    })
-  );
+  if (Good1stIssuesLabelsData) {
+    return Good1stIssuesLabelsData.slice(0, 1).map(
+      (labelData: Good1stIssueLabelType) => ({
+        label: labelData.label,
+      })
+    );
+  } else {
+    return [];
+  }
 }
 // End of static generation
 
@@ -83,12 +87,13 @@ export default async function Good1stIssueLabelPage({
       />
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
         <div className="md:col-span-4">
-          {IssueData.map((Good1stIssue: Good1stIssueType) => (
-            <Good1stIssueCard
-              key={Good1stIssue.issue_title}
-              Good1stIssueData={Good1stIssue}
-            />
-          ))}
+          {IssueData &&
+            IssueData.map((Good1stIssue: Good1stIssueType) => (
+              <Good1stIssueCard
+                key={Good1stIssue.issue_title}
+                Good1stIssueData={Good1stIssue}
+              />
+            ))}
         </div>
         <div className="md:col-span-2">
           <LabelsCard LabelsData={LabelsData} />

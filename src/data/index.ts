@@ -6,7 +6,11 @@ import {
   getFilteredGood1stIssuesData,
   getGood1stIssueLabelsData,
 } from "./Good1stIssue";
-import { getGoodFirstIssuesData, GoodFirstIssueLabels } from "./GoodFirstIssue";
+import {
+  getGoodFirstIssuesData,
+  GoodFirstIssueLabels,
+  GoodFirstIssueRepos,
+} from "./GoodFirstIssue";
 import { default as NavbarLinks } from "./NavbarLinks";
 import {
   getProgramsData,
@@ -33,6 +37,7 @@ export {
   getGood1stIssueLabelsData,
   getGoodFirstIssuesData,
   GoodFirstIssueLabels,
+  GoodFirstIssueRepos,
   NavbarLinks,
   getProgramsData,
   getFilteredProgramsData,

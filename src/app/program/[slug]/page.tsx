@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 
 import type { ProgramType } from "@/types";
 
-import { getProgramData, getProgramTagsData, getProgramsData, SiteMetadata } from "@/data";
+import {
+  getProgramData,
+  getProgramTagsData,
+  getProgramsData,
+  SiteMetadata,
+} from "@/data";
 
 import Breadcrumb from "@/components/Breadcrumb";
 import MarkdownPreview from "@/components/MarkdownPreview";

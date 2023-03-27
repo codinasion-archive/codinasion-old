@@ -1,0 +1,13 @@
+name: Feature a repository on the `good-first-issue` page
+description:
+title: "Request for featuring a repository: [REPO_OWNER/REPO_NAME]"
+labels: []
+assignees: "harshraj8843"
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Repository
+      placeholder: Insert the repository full name (e.g. `codinasion/program`)
+    validations:
+      required: true

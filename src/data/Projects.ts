@@ -28,6 +28,16 @@ const Projects: ProjectType[] = [
       "'Hello World' in every programming language. Good collection of good first issue",
     github_url: "https://github.com/codinasion/hello-world",
   },
+  {
+    title: "Language",
+    description: "A collection of Programming Language data.",
+    github_url: "https://github.com/codinasion/language",
+  },
+  {
+    title: "Progress",
+    description: "Twitter bot to tweet year and week progress",
+    github_url: "https://github.com/codinasion/year-progress-2",
+  },
 ];
 
 export default Projects;
