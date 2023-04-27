@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-import Layout from "@/Layout";
+import Layout from "@/layouts";
 
 import "./globals.css";
 
@@ -15,61 +15,12 @@ export const metadata = {
   title: SiteMetadata.title,
   description: SiteMetadata.description,
 
-  // basic
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "cyan" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   manifest: Manifest,
   icons: {
     icon: Favicon.src,
     shortcut: ShortcutIcon.src,
     apple: AppleTouchIcon.src,
     android: Logo.src,
-  },
-
-  // robots.txt
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-
-  // Open Graph
-  openGraph: {
-    title: SiteMetadata.title,
-    description: SiteMetadata.description,
-    url: SiteMetadata.site_url,
-    siteName: SiteMetadata.title,
-    images: [
-      {
-        url: `${process.env.NEXT_PUBLIC_API_URL}/og`,
-        width: 1200,
-        height: 630,
-        alt: SiteMetadata.title,
-      },
-    ],
-    locale: "en-US",
-    type: "website",
-  },
-
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    title: SiteMetadata.title,
-    description: SiteMetadata.description,
-    siteId: SiteMetadata.twitter_userid,
-    creator: SiteMetadata.twitter_username,
-    creatorId: SiteMetadata.twitter_userid,
-    images: [`${process.env.NEXT_PUBLIC_API_URL}/og`],
   },
 };
 
@@ -97,7 +48,7 @@ export default function RootLayout({
           gtag('config', 'G-X1PJY1SDDM');
         `}
       </Script>
-      <body className="bg-slate-200 dark:bg-slate-900 text-gray-800 dark:text-gray-200">
+      <body className="bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-200">
         <Layout>{children}</Layout>
       </body>
     </html>

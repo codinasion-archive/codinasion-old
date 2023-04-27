@@ -3,65 +3,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  async redirects() {
-    return [
-      {
-        source: "/project/:path*",
-        destination: "/projects/:path*",
-        permanent: true,
-      },
-      {
-        source: "/programs/:slug*",
-        destination: "/program/:slug*",
-        permanent: true,
-      },
-      {
-        source: "/contributor",
-        destination: "/contributors",
-        permanent: true,
-      },
-      {
-        source: "/good-first-issue/:path*",
-        destination: "/good-1st-issue/:path*",
-        permanent: true,
-      },
-      {
-        source: "/good-first-issues/:path*",
-        destination: "/good-1st-issue/:path*",
-        permanent: true,
-      },
-      {
-        source: "/good-1st-issues/:path*",
-        destination: "/good-1st-issue/:path*",
-        permanent: true,
-      },
-      {
-        source: "/goodfirstissue/:path*",
-        destination: "/good-1st-issue/:path*",
-        permanent: true,
-      },
-      {
-        source: "/goodfirstissues/:path*",
-        destination: "/good-1st-issue/:path*",
-        permanent: true,
-      },
-      {
-        source: "/good1stissue/:path*",
-        destination: "/good-1st-issue/:path*",
-        permanent: true,
-      },
-      {
-        source: "/good1stissues/:path*",
-        destination: "/good-1st-issue/:path*",
-        permanent: true,
-      },
-      {
-        source: "/tool/:path*",
-        destination: "/tools/:path*",
-        permanent: true,
-      },
-    ];
-  },
+
   images: {
     remotePatterns: [
       {
@@ -71,6 +13,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "raw.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "user-images.githubusercontent.com",
       },
     ],
   },

@@ -8,14 +8,6 @@ const FooterLinks: FooterLinksType[] = [
         title: "API",
         url: "https://api.codinasion.org/",
       },
-      {
-        title: "Projects",
-        url: "/projects",
-      },
-      {
-        title: "Contributors",
-        url: "/contributors",
-      },
     ],
   },
   {
@@ -24,14 +16,6 @@ const FooterLinks: FooterLinksType[] = [
       {
         title: "Program",
         url: "/program",
-      },
-      {
-        title: "Good 1st Issue",
-        url: "/good-1st-issue",
-      },
-      {
-        title: "Tools",
-        url: "/tools",
       },
     ],
   },
@@ -45,10 +29,6 @@ const FooterLinks: FooterLinksType[] = [
       {
         title: "robots.txt",
         url: "/robots.txt",
-      },
-      {
-        title: "humans.txt",
-        url: "/humans.txt",
       },
     ],
   },
