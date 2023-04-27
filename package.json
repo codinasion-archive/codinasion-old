@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@giscus/react": "^2.2.8",
-    "@headlessui/react": "^1.7.13",
+    "@headlessui/react": "^1.7.14",
     "@next/env": "^13.2.4",
     "next": "13.2.4",
     "next-sitemap": "^4.0.5",
