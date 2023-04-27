@@ -54,7 +54,7 @@ export default function CodeBlock({
             <button
               key={index}
               onClick={(e) => handleChange(e, index)}
-              className={`btn text-sm font-bold mx-1 py-1 px-2 rounded-md ${
+              className={`btn text-sm font-bold mx-1 mb-1 py-1 px-2 rounded-md ${
                 value === index
                   ? "bg-emerald-500 dark:bg-emerald-400"
                   : "bg-emerald-300 dark:bg-emerald-500"

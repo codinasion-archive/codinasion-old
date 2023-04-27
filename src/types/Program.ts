@@ -15,4 +15,25 @@ type ProgramLanguageType = {
   logo: string;
 };
 
-export type { ProgramType, ProgramLanguageType };
+type ProgramCodeType = {
+  language: ProgramLanguageType;
+  code: string;
+};
+
+type ProgramDetailType = {
+  id: number;
+  slug: string;
+  description: string;
+  track_id: number;
+  last_updated: string;
+  languages: string[];
+  contributors: string[];
+  codes: ProgramCodeType[];
+};
+
+export type {
+  ProgramType,
+  ProgramLanguageType,
+  ProgramCodeType,
+  ProgramDetailType,
+};

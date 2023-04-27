@@ -99,8 +99,9 @@ int c = a + b;
           },
         ]}
       />
-
-      <MarkdownPreview>{markdown_text}</MarkdownPreview>
+      <div className="py-5">
+        <MarkdownPreview>{markdown_text}</MarkdownPreview>
+      </div>
     </>
   );
 }

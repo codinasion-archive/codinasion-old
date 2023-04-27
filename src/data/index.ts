@@ -4,6 +4,7 @@ import {
   getProgramData,
   getProgramLanguageData,
   getFilteredProgramData,
+  getProgramDetailData,
 } from "./Program";
 import { default as SiteMetadata } from "./SiteMetadata";
 
@@ -17,6 +18,7 @@ export {
   getProgramData,
   getProgramLanguageData,
   getFilteredProgramData,
+  getProgramDetailData,
   //
   // SiteMetadata
   SiteMetadata,

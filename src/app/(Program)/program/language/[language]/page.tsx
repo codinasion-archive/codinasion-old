@@ -18,7 +18,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const language = params.language;
   return {
-    title: `${language} | Language | Program`,
+    title: `${language
+      .replace(/\-sharp/g, "#")
+      .replace(/\-plus/g, "+")
+      .replace(/\w\S*/g, (w) =>
+        w.replace(/^\w/, (c) => c.toUpperCase())
+      )} | Language | Program`,
     description: "An open-source codebase for sharing programming solutions.",
   };
 }
@@ -77,7 +82,12 @@ export default async function ProgramLanguagePage({
             url: "/program/language",
           },
           {
-            title: language,
+            title: language
+              .replace(/\-sharp/g, "#")
+              .replace(/\-plus/g, "+")
+              .replace(/\w\S*/g, (w) =>
+                w.replace(/^\w/, (c) => c.toUpperCase())
+              ),
           },
         ]}
       />
@@ -87,7 +97,11 @@ export default async function ProgramLanguagePage({
         <div className="md:col-span-4">
           {ProgramData.length > 0 ? (
             ProgramData.slice(0, 4).map((program: ProgramType) => (
-              <ProgramCard key={program.id} ProgramData={program} />
+              <ProgramCard
+                key={program.id}
+                ProgramData={program}
+                language={language}
+              />
             ))
           ) : (
             <div className="text-gray-500 dark:text-gray-400 text-lg font-medium py-5">

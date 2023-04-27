@@ -14,7 +14,7 @@ export default function MarkdownPreview({ children }: ReactMarkdownPropsType) {
   return (
     <>
       <ReactMarkdown
-        className="prose dark:prose-invert max-w-none prose-pre:p-0 py-5"
+        className="prose dark:prose-invert max-w-none prose-pre:p-0"
         components={MdxComponents}
         rehypePlugins={[rehypeRaw]}
         remarkPlugins={[remarkGfm]}

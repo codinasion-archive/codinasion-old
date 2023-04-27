@@ -5,14 +5,20 @@ import type { ProgramType } from "@/types";
 
 type ProgramCardProps = {
   ProgramData: ProgramType;
+  language?: string;
 };
 
-export default function ProgramCard({ ProgramData }: ProgramCardProps) {
+export default function ProgramCard({
+  ProgramData,
+  language,
+}: ProgramCardProps) {
   return (
     <>
       <Link
         key={ProgramData.slug}
-        href={`/program/${ProgramData.slug}`}
+        href={`/program${language ? `/language/${language}` : ``}/${
+          ProgramData.slug
+        }`}
         className="block p-3 mb-4 rounded-md shadow-lg hover:shadow-xl card_bg"
         externalIcon={false}
       >
