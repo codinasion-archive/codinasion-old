@@ -6,6 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ProgramCard from "@/components/Program/ProgramCard";
 import ProgramLanguageCard from "@/components/Program/ProgramLanguageCard";
 
+import Comment from "@/components/Comment";
+
 export const metadata = {
   title: "Program",
   description: "An open-source codebase for sharing programming solutions.",
@@ -45,6 +47,8 @@ export default async function ProgramPage() {
           {ProgramData.slice(0, 4).map((program: ProgramType) => (
             <ProgramCard key={program.id} ProgramData={program} />
           ))}
+
+          <Comment />
         </div>
         <div className="md:col-span-2">
           <ProgramLanguageCard languages={ProgramLanguageData} />

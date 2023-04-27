@@ -1,6 +1,8 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import MarkdownPreview from "@/components/MarkdownPreview";
 
+import Comment from "@/components/Comment";
+
 export default async function MarkdownPreviewPage() {
   const markdown_text = `# Heading 1
 
@@ -101,6 +103,8 @@ int c = a + b;
       />
       <div className="py-5">
         <MarkdownPreview>{markdown_text}</MarkdownPreview>
+
+        <Comment />
       </div>
     </>
   );

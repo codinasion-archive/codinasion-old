@@ -9,6 +9,8 @@ import ProgramDetail from "@/components/Program/ProgramDetail";
 import AvailableSolutionCard from "@/components/Program/AvailableSolutionCard";
 import ContributorsCard from "@/components/Program/ContributorsCard";
 
+import Comment from "@/components/Comment";
+
 ////////////////////////////////////////////////////////////////////////////////
 // https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata-function
 // Generate metadata for this page
@@ -79,6 +81,8 @@ export default async function ProgramDetailPage({
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
         <div className="md:col-span-4">
           <ProgramDetail ProgramData={ProgramData} />
+
+          <Comment />
         </div>
         <div className="md:col-span-2">
           <AvailableSolutionCard ProgramData={ProgramData} />

@@ -8,6 +8,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ProgramCard from "@/components/Program/ProgramCard";
 import ProgramLanguageCard from "@/components/Program/ProgramLanguageCard";
 
+import Comment from "@/components/Comment";
+
 ////////////////////////////////////////////////////////////////////////////////
 // https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata-function
 // Generate metadata for this page
@@ -108,6 +110,8 @@ export default async function ProgramLanguagePage({
               No programs found for {language}.
             </div>
           )}
+
+          <Comment />
         </div>
         <div className="md:col-span-2">
           <ProgramLanguageCard languages={ProgramLanguageData} />
