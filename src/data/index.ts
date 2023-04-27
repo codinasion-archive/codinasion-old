@@ -1,6 +1,10 @@
 import { default as FooterLinks } from "./FooterLinks";
 import { default as NavbarLinks } from "./NavbarLinks";
-import { getProgramData, getProgramLanguageData } from "./Program";
+import {
+  getProgramData,
+  getProgramLanguageData,
+  getFilteredProgramData,
+} from "./Program";
 import { default as SiteMetadata } from "./SiteMetadata";
 
 export {
@@ -12,6 +16,7 @@ export {
   // Program
   getProgramData,
   getProgramLanguageData,
+  getFilteredProgramData,
   //
   // SiteMetadata
   SiteMetadata,

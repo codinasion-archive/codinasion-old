@@ -31,3 +31,22 @@ export async function getProgramLanguageData() {
 
   return data;
 }
+
+export async function getFilteredProgramData(language = "c") {
+  language = language.toLowerCase();
+
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_CODINASION_API_URL}/program/language/${language}`,
+    {
+      next: { revalidate: 60 },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch filtered program data for ${language}`);
+  }
+
+  const data = await res.json();
+
+  return data;
+}
