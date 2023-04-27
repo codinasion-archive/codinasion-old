@@ -1,6 +1,6 @@
 export async function getProgramData() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_CODINASION_API_URL}/program/`,
+    `${process.env.NEXT_PUBLIC_CODINASION_API_URL}/program`,
     {
       next: { revalidate: 60 },
     }
@@ -17,7 +17,7 @@ export async function getProgramData() {
 
 export async function getProgramLanguageData() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_CODINASION_API_URL}/program/language/`,
+    `${process.env.NEXT_PUBLIC_CODINASION_API_URL}/program/language`,
     {
       next: { revalidate: 60 },
     }
