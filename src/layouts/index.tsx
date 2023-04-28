@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ScrollToButton from "@/components/ScrollToButton";
 
 interface Props {
   children: React.ReactNode;
@@ -19,7 +19,7 @@ export default function Layout({ children }: Props) {
           <div className="px-4 lg:px-6 py-4">{children}</div>
           <Footer />
         </main>
-        <ScrollToTopButton />
+        <ScrollToButton />
       </ThemeProvider>
     </>
   );
