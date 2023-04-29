@@ -44,7 +44,7 @@ export default async function ProgramPage() {
       {/* Main */}
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
         <div className="md:col-span-4">
-          {ProgramData.slice(0, 4).map((program: ProgramType) => (
+          {ProgramData.map((program: ProgramType) => (
             <ProgramCard key={program.id} ProgramData={program} />
           ))}
 
