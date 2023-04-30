@@ -10,6 +10,8 @@ import ProgramLanguageCard from "@/components/Program/ProgramLanguageCard";
 
 import Comment from "@/components/Comment";
 
+import Ads_300x250 from "@/components/Ads/Ads_300x250";
+
 ////////////////////////////////////////////////////////////////////////////////
 // https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata-function
 // Generate metadata for this page
@@ -115,6 +117,8 @@ export default async function ProgramLanguagePage({
         </div>
         <div className="md:col-span-2">
           <ProgramLanguageCard languages={ProgramLanguageData} />
+
+          <Ads_300x250 />
         </div>
       </div>
     </>

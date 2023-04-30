@@ -2,6 +2,8 @@
 
 import * as React from "react";
 
+import { BsFillInfoCircleFill } from "react-icons/bs";
+
 type Props = {
   apiKey: string;
   width: number;
@@ -38,8 +40,19 @@ export default function Ads({ apiKey, width, height }: Props): JSX.Element {
 
   return (
     <>
-      {/* @ts-ignore */}
-      <div ref={banner}></div>
+      <div
+        className="card_bg p-2 rounded-md text-sm font-semibold w-full"
+        style={{
+          height: height + 50,
+        }}
+      >
+        <BsFillInfoCircleFill className="inline-block mr-1 mb-1" />{" "}
+        Advertisement
+        <div className="flex items-center justify-center p-2">
+          {/* @ts-ignore */}
+          <div ref={banner}></div>
+        </div>
+      </div>
     </>
   );
 }

@@ -11,6 +11,8 @@ import ContributorsCard from "@/components/Program/ContributorsCard";
 
 import Comment from "@/components/Comment";
 
+import Ads_300x250 from "@/components/Ads/Ads_300x250";
+
 ////////////////////////////////////////////////////////////////////////////////
 // https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata-function
 // Generate metadata for this page
@@ -86,7 +88,10 @@ export default async function ProgramDetailPage({
         </div>
         <div className="md:col-span-2">
           <AvailableSolutionCard ProgramData={ProgramData} />
+
           <ContributorsCard ProgramData={ProgramData} />
+
+          <Ads_300x250 />
         </div>
       </div>
     </>
