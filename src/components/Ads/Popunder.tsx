@@ -10,12 +10,11 @@ import Script from "next/script";
 
 export default function Popunder() {
   const [showPopunder, setShowPopunder] = React.useState(false);
-  const [firstTimeVisitor, setFirstTimeVisitor] = React.useState(false);
+  const [firstTimeVisitor, setFirstTimeVisitor] = React.useState(true);
 
   React.useEffect(() => {
     const firstTimeVisitor = localStorage.getItem("firstTimeVisitor");
     if (!firstTimeVisitor) {
-      setFirstTimeVisitor(true);
       localStorage.setItem("firstTimeVisitor", "true");
     } else {
       setFirstTimeVisitor(false);
