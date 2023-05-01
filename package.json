@@ -14,7 +14,7 @@
   "dependencies": {
     "@giscus/react": "^2.2.8",
     "@headlessui/react": "^1.7.14",
-    "@next/env": "^13.3.1",
+    "@next/env": "^13.3.2",
     "next": "13.3.1",
     "next-sitemap": "^4.0.7",
     "next-themes": "^0.2.1",
