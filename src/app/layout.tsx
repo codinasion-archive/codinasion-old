@@ -49,14 +49,6 @@ export default function RootLayout({
         `}
       </Script>
 
-      {/* <!-- Google adsense --> */}
-      <Script
-        id="google-adsense"
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729005366166129"
-        strategy="afterInteractive"
-      />
-
       <body className="bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-200">
         <Layout>{children}</Layout>
       </body>
