@@ -7,6 +7,7 @@ import {
   getProgramDetailData,
 } from "./Program";
 import { default as SiteMetadata } from "./SiteMetadata";
+import { getSponsorData } from "./Sponsor";
 
 export {
   FooterLinks,
@@ -22,4 +23,7 @@ export {
   //
   // SiteMetadata
   SiteMetadata,
+  //
+  // Sponsor
+  getSponsorData,
 };

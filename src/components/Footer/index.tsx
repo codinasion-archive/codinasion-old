@@ -107,7 +107,7 @@ export default function Footer() {
               </h3>
               <ul className="mt-4 space-y-2">
                 {FooterLink.links.map((link: FooterLinkType) => (
-                  <li className="text-md pl-1" key={link.title}>
+                  <li className="text-base pl-1" key={link.title}>
                     <Link href={link.url}>{link.title}</Link>
                   </li>
                 ))}
@@ -119,7 +119,7 @@ export default function Footer() {
         <hr className="border-gray-200 sm:mx-auto dark:border-gray-700 my-5" />
 
         <div className="flex flex-col items-center justify-center py-6">
-          <p className="text-md text-gray-500 dark:text-gray-400">
+          <p className="text-base text-gray-500 dark:text-gray-400">
             Made with ❤️ by{" "}
             <Link
               href={SiteMetadata.github_url}
