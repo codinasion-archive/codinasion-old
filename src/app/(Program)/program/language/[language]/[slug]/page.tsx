@@ -11,6 +11,8 @@ import ContributorsCard from "@/components/Program/ContributorsCard";
 
 import Comment from "@/components/Comment";
 
+import Sponsor from "@/components/Sponsor";
+
 ////////////////////////////////////////////////////////////////////////////////
 // https://beta.nextjs.org/docs/api-reference/metadata#generatemetadata-function
 // Generate metadata for this page
@@ -119,6 +121,10 @@ export default async function ProgramDetailPage({
         <div className="md:col-span-2">
           <AvailableSolutionCard ProgramData={ProgramData} />
           <ContributorsCard ProgramData={ProgramData} />
+
+          <div className="sticky top-0 py-2">
+            <Sponsor />
+          </div>
         </div>
       </div>
     </>
