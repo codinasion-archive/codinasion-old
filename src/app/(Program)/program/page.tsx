@@ -8,6 +8,8 @@ import ProgramLanguageCard from "@/components/Program/ProgramLanguageCard";
 
 import Comment from "@/components/Comment";
 
+import Sponsor from "@/components/Sponsor";
+
 export const metadata = {
   title: "Program",
   description: "An open-source codebase for sharing programming solutions.",
@@ -52,6 +54,10 @@ export default async function ProgramPage() {
         </div>
         <div className="md:col-span-2">
           <ProgramLanguageCard languages={ProgramLanguageData} />
+
+          <div className="sticky top-0 py-2">
+            <Sponsor />
+          </div>
         </div>
       </div>
     </>
