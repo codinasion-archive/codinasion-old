@@ -27,7 +27,7 @@ export default function ProgramLanguageCard({ languages }: LanguageCardProps) {
                 <Image
                   src={language.logo}
                   alt={language.name}
-                  className="w-20 h-20 rounded shadow-lg"
+                  className="w-16 md:w-20 rounded shadow-lg"
                   height={128}
                   width={128}
                 />

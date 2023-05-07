@@ -7,6 +7,7 @@ import type {
   ProgramCodeType,
   ProgramDetailType,
 } from "./Program";
+import type { SponsorType } from "./Sponsor";
 
 export type {
   BreadcrumbType,
@@ -23,4 +24,7 @@ export type {
   ProgramLanguageType,
   ProgramCodeType,
   ProgramDetailType,
+  //
+  // Sponsor
+  SponsorType,
 };
