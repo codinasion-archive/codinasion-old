@@ -9,7 +9,7 @@ const SiteMetadata = {
   twitter_userid: "1527970903367135232",
   //
   program_sponsor_url:
-    "https://github.com/sponsors/harshraj8843?frequency=one-time",
+    "https://github.com/sponsors/codinasion",
 };
 
 export default SiteMetadata;
